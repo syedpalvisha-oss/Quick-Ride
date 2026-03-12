@@ -9,13 +9,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class User extends Authenticatable
+class User extends Authenticatable implements HasMedia
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
     use HasApiTokens;
     use SoftDeletes;
+    use InteractsWithMedia;
 
     /**
      * The attributes that are mass assignable.
@@ -50,4 +53,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public static function booted()
+    {
+        static::updating(function (self $model) {
+            if ($model->isDirty('email')) {
+                $model->email_verified_at = null;
+            }
+        });
+    }
+
+    public function orders(){return $this->hasMany(Order::class);}
+    public function isAdmin(){return $this->getKey() === 1;}
 }
