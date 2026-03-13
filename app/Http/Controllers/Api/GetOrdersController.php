@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Enums\VehicleType;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
@@ -13,6 +14,9 @@ class GetOrdersController extends Controller
     {
         return OrderResource::collection(
             Order::query()
+                ->when($request->query('from'), fn($query) => $query->where('created_at', '>=', $request->date(key: 'from', tz: $request->header('X-Timezone'))))
+                ->when($request->query('to'), fn($query) => $query->where('created_at', '<=', $request->date(key: 'to', tz: $request->header('X-Timezone'))))
+                ->when($request->enum('vehicle_type', VehicleType::class), fn($query, $value) => $query->where('vehicle_type', $value))
                 ->when(
                     $request->query('role') === 'driver',
                     fn($query) => $query->with('driver')->where('driver_id', $request->user()->getKey()),
