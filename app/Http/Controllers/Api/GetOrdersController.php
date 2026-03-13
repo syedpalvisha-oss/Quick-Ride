@@ -14,10 +14,18 @@ class GetOrdersController extends Controller
     {
         $user = $request->user();
         $role = $request->string('role')->toString();
+        $status = $request->string('status')->toString();
+        $timezone = $request->header('X-Timezone');
+        $fromDate = $request->query('from')
+            ? $request->date(key: 'from', tz: $timezone)?->startOfDay()
+            : null;
+        $toDate = $request->query('to')
+            ? $request->date(key: 'to', tz: $timezone)?->endOfDay()
+            : null;
 
         $query = Order::query()
-            ->when($request->query('from'), fn ($builder) => $builder->where('created_at', '>=', $request->date(key: 'from', tz: $request->header('X-Timezone'))))
-            ->when($request->query('to'), fn ($builder) => $builder->where('created_at', '<=', $request->date(key: 'to', tz: $request->header('X-Timezone'))))
+            ->when($fromDate, fn ($builder) => $builder->where('created_at', '>=', $fromDate))
+            ->when($toDate, fn ($builder) => $builder->where('created_at', '<=', $toDate))
             ->when($request->enum('vehicle_type', VehicleType::class), fn ($builder, $value) => $builder->where('vehicle_type', $value))
             ->latest();
 
@@ -59,7 +67,25 @@ class GetOrdersController extends Controller
                 ->when(
                     $user->isAdmin(),
                     fn ($builder) => $builder->with(['user', 'driver']),
-                    fn ($builder) => $builder->with('user')->where('user_id', $user->getKey())
+                    fn ($builder) => $builder
+                        ->with(['user', 'driver'])
+                        ->where('user_id', $user->getKey())
+                        ->when(
+                            $status === 'active',
+                            fn ($riderOrdersQuery) => $riderOrdersQuery
+                                ->whereNull('completed_at')
+                                ->whereNull('cancelled_at')
+                                ->whereNull('driver_cancelled_at')
+                        )
+                        ->when(
+                            $status === 'past',
+                            fn ($riderOrdersQuery) => $riderOrdersQuery->where(function ($pastOrdersQuery) {
+                                $pastOrdersQuery
+                                    ->whereNotNull('completed_at')
+                                    ->orWhereNotNull('cancelled_at')
+                                    ->orWhereNotNull('driver_cancelled_at');
+                            })
+                        )
                 )
                 ->paginate()
         );

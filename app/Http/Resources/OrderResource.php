@@ -20,6 +20,7 @@ class OrderResource extends JsonResource
     {
         return [
             'uuid' => $this->resource->uuid,
+            'created_at' => $this->resource->created_at,
             'vehicle_type' => $this->resource->vehicle_type?->value ?? $this->resource->getRawOriginal('vehicle_type'),
             'matched_at' => $this->resource->matched_at,
             'pickup_at' => $this->resource->pickup_at,

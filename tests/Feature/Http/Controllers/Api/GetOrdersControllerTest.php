@@ -33,6 +33,107 @@ function makeDriver(int $vehicleType = 0): User
     return $driver->fresh();
 }
 
+it('returns only active orders for riders when filtering by active status', function () {
+    User::factory()->create();
+    $rider = User::factory()->create();
+
+    $activeOrder = makeOrder([
+        'user_id' => $rider->getKey(),
+    ]);
+    makeOrder([
+        'user_id' => $rider->getKey(),
+        'completed_at' => now(),
+    ]);
+    makeOrder([
+        'user_id' => $rider->getKey(),
+        'cancelled_at' => now(),
+    ]);
+    makeOrder([
+        'user_id' => User::factory()->create()->getKey(),
+    ]);
+
+    Sanctum::actingAs($rider);
+
+    $this->getJson('/api/orders?status=active')
+        ->assertSuccessful()
+        ->assertJsonCount(1, 'data')
+        ->assertJsonPath('data.0.uuid', $activeOrder->uuid);
+});
+
+it('returns only past orders for riders when filtering by past status', function () {
+    User::factory()->create();
+    $rider = User::factory()->create();
+
+    $completedOrder = makeOrder([
+        'user_id' => $rider->getKey(),
+        'completed_at' => now()->subMinute(),
+    ]);
+    $cancelledOrder = makeOrder([
+        'user_id' => $rider->getKey(),
+        'cancelled_at' => now()->subMinutes(2),
+    ]);
+    $driverCancelledOrder = makeOrder([
+        'user_id' => $rider->getKey(),
+        'driver_cancelled_at' => now()->subMinutes(3),
+    ]);
+    makeOrder([
+        'user_id' => $rider->getKey(),
+    ]);
+    makeOrder([
+        'user_id' => User::factory()->create()->getKey(),
+        'completed_at' => now(),
+    ]);
+
+    Sanctum::actingAs($rider);
+
+    $response = $this->getJson('/api/orders?status=past')
+        ->assertSuccessful()
+        ->assertJsonCount(3, 'data');
+
+    $returnedUuids = collect($response->json('data'))
+        ->pluck('uuid')
+        ->sort()
+        ->values()
+        ->all();
+
+    $expectedUuids = collect([
+        $cancelledOrder->uuid,
+        $completedOrder->uuid,
+        $driverCancelledOrder->uuid,
+    ])->sort()->values()->all();
+
+    expect($returnedUuids)->toBe($expectedUuids);
+});
+
+it('filters rider orders by date range', function () {
+    User::factory()->create();
+    $rider = User::factory()->create();
+
+    $inRangeOrder = makeOrder([
+        'user_id' => $rider->getKey(),
+        'created_at' => now()->subDays(2)->setTime(14, 0),
+    ]);
+    makeOrder([
+        'user_id' => $rider->getKey(),
+        'created_at' => now()->subDays(10),
+    ]);
+    makeOrder([
+        'user_id' => $rider->getKey(),
+        'created_at' => now(),
+    ]);
+
+    $from = now()->subDays(3)->toDateString();
+    $to = now()->subDay()->toDateString();
+
+    Sanctum::actingAs($rider);
+
+    $this->withHeader('X-Timezone', 'UTC')
+        ->getJson("/api/orders?from={$from}&to={$to}")
+        ->assertSuccessful()
+        ->assertJsonCount(1, 'data')
+        ->assertJsonPath('data.0.uuid', $inRangeOrder->uuid);
+});
+
 it('returns only orders associated to the authenticated driver', function () {
     $driver = makeDriver(VehicleType::MOTORBIKE->value);
 

@@ -507,6 +507,11 @@ document.addEventListener('alpine:init', () => {
         driverOrdersLoading: false,
         incomingOrdersLoading: false,
         matchingOrderUuid: null,
+        riderOrders: [],
+        riderOrdersLoading: false,
+        riderOrdersTab: 'active',
+        riderOrdersFrom: '',
+        riderOrdersTo: '',
 
         // Booking state
         step: 'idle', // idle, selectPickup, selectDropoff, selectVehicle, searching, active, completed
@@ -604,10 +609,14 @@ document.addEventListener('alpine:init', () => {
                 this.user = data.data;
 
                 if (vehicleId !== null) {
+                    this.riderOrders = [];
                     this.cancelBooking();
                     await this.refreshDriverOrderFeeds();
                 } else {
                     await this.checkActiveOrders();
+                    if (this.riderOrdersTab !== 'active') {
+                        await this.fetchRiderOrders();
+                    }
                 }
             } catch (e) {
                 alert(e.response?.data?.message || 'Failed to update active vehicle.');
@@ -978,6 +987,7 @@ document.addEventListener('alpine:init', () => {
                 this.activeOrder = { ...this.activeOrder, cancelled_at: new Date().toISOString() };
                 this.step = 'completed';
                 this.stopPolling();
+                await this.fetchRiderOrders();
             } catch (e) {
                 alert(e.response?.data?.message || 'Failed to cancel ride.');
             }
@@ -1010,6 +1020,7 @@ document.addEventListener('alpine:init', () => {
                     this.step = 'completed';
                     this.stopPolling();
                     this.stopSearchTimeout();
+                    await this.fetchRiderOrders();
                 }
             } catch {
                 // silent fail
@@ -1066,6 +1077,166 @@ document.addEventListener('alpine:init', () => {
             }
 
             return 'bg-void-700/50 text-void-200 border-void-600';
+        },
+
+        riderOrderStatus(order) {
+            if (order?.completed_at) {
+                return 'Completed';
+            }
+
+            if (order?.cancelled_at) {
+                return 'Cancelled';
+            }
+
+            if (order?.driver_cancelled_at) {
+                return 'Cancelled by driver';
+            }
+
+            if (order?.pickup_at) {
+                return 'In trip';
+            }
+
+            if (order?.matched_at) {
+                return 'Driver matched';
+            }
+
+            return 'Searching';
+        },
+
+        riderOrderStatusClass(order) {
+            if (order?.completed_at) {
+                return 'bg-emerald-400/10 text-emerald-300 border-emerald-400/20';
+            }
+
+            if (order?.cancelled_at || order?.driver_cancelled_at) {
+                return 'bg-red-400/10 text-red-300 border-red-400/20';
+            }
+
+            if (order?.pickup_at || order?.matched_at) {
+                return 'bg-neon-400/10 text-neon-400 border-neon-400/20';
+            }
+
+            return 'bg-void-700/50 text-void-200 border-void-600';
+        },
+
+        riderOrdersTabClass(tab) {
+            if (this.riderOrdersTab === tab) {
+                return 'bg-neon-400 text-void-950';
+            }
+
+            return 'text-void-300 hover:text-void-100';
+        },
+
+        riderOrdersEmptyMessage() {
+            if (this.riderOrdersTab === 'active') {
+                return 'No active orders right now.';
+            }
+
+            if (this.riderOrdersTab === 'past') {
+                return 'No past orders yet.';
+            }
+
+            if (!this.riderOrdersFrom && !this.riderOrdersTo) {
+                return 'Set a date range and apply filter.';
+            }
+
+            return 'No orders found for this range.';
+        },
+
+        riderDateRangeInvalid() {
+            if (!this.riderOrdersFrom || !this.riderOrdersTo) {
+                return false;
+            }
+
+            return this.riderOrdersFrom > this.riderOrdersTo;
+        },
+
+        canApplyRiderDateRange() {
+            if (!this.riderOrdersFrom || !this.riderOrdersTo) {
+                return false;
+            }
+
+            return !this.riderDateRangeInvalid();
+        },
+
+        async setRiderOrdersTab(tab) {
+            if (!['active', 'past', 'date_range'].includes(tab) || this.riderOrdersTab === tab) {
+                return;
+            }
+
+            this.riderOrdersTab = tab;
+            await this.fetchRiderOrders();
+        },
+
+        buildRiderOrdersParams() {
+            const params = {};
+
+            if (this.riderOrdersTab === 'active' || this.riderOrdersTab === 'past') {
+                params.status = this.riderOrdersTab;
+            }
+
+            if (this.riderOrdersTab === 'date_range') {
+                if (this.riderOrdersFrom) {
+                    params.from = this.riderOrdersFrom;
+                }
+
+                if (this.riderOrdersTo) {
+                    params.to = this.riderOrdersTo;
+                }
+            }
+
+            return params;
+        },
+
+        async applyRiderDateRange() {
+            if (!this.canApplyRiderDateRange()) {
+                return;
+            }
+
+            await this.fetchRiderOrders();
+        },
+
+        async clearRiderDateRange() {
+            this.riderOrdersFrom = '';
+            this.riderOrdersTo = '';
+            await this.fetchRiderOrders();
+        },
+
+        async fetchRiderOrders() {
+            if (this.isDriverMode()) {
+                this.riderOrders = [];
+
+                return;
+            }
+
+            this.riderOrdersLoading = true;
+
+            try {
+                const { data } = await axios.get('/api/orders', {
+                    params: this.buildRiderOrdersParams(),
+                });
+
+                this.riderOrders = data.data || [];
+            } catch {
+                this.riderOrders = [];
+            } finally {
+                this.riderOrdersLoading = false;
+            }
+        },
+
+        formatOrderDate(date) {
+            if (!date) {
+                return '-';
+            }
+
+            try {
+                return new Intl.DateTimeFormat('en-US', {
+                    dateStyle: 'medium',
+                    timeStyle: 'short',
+                }).format(new Date(date));
+            } catch {
+                return date;
+            }
         },
 
         orderVehicleLabel(order) {
@@ -1171,17 +1342,25 @@ document.addEventListener('alpine:init', () => {
 
         async checkActiveOrders() {
             if (this.isDriverMode()) {
+                this.riderOrders = [];
                 await this.refreshDriverOrderFeeds();
 
                 return;
             }
 
             try {
-                const { data } = await axios.get('/api/orders');
-                const orders = data.data || [];
-                const active = orders.find(
-                    (o) => !o.completed_at && !o.cancelled_at && !o.driver_cancelled_at,
-                );
+                const { data } = await axios.get('/api/orders', {
+                    params: { status: 'active' },
+                });
+                const activeOrders = data.data || [];
+                const active = activeOrders[0] || null;
+
+                if (this.riderOrdersTab === 'active') {
+                    this.riderOrders = activeOrders;
+                } else {
+                    await this.fetchRiderOrders();
+                }
+
                 if (active) {
                     this.activeOrder = active;
                     this.step = 'active';
@@ -1242,6 +1421,10 @@ document.addEventListener('alpine:init', () => {
             if (this.pickupMarker) { this.map.removeLayer(this.pickupMarker); this.pickupMarker = null; }
             if (this.dropoffMarker) { this.map.removeLayer(this.dropoffMarker); this.dropoffMarker = null; }
             if (this.routeLine) { this.map.removeLayer(this.routeLine); this.routeLine = null; }
+
+            if (!this.isDriverMode()) {
+                this.fetchRiderOrders();
+            }
         },
 
         getStatusText() {

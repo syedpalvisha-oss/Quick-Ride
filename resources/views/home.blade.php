@@ -104,6 +104,98 @@
                             >
                                 Choose on map
                             </button>
+
+                            <div class="space-y-2 rounded-lg border border-void-700 bg-void-800/30 p-3">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xs font-medium uppercase tracking-wide text-void-400">My Orders</p>
+                                    <button
+                                        x-on:click="fetchRiderOrders"
+                                        class="text-xs font-medium text-neon-400 transition hover:text-neon-300"
+                                    >Refresh</button>
+                                </div>
+
+                                <div class="flex items-center rounded-lg border border-void-700 bg-void-900/60 p-1">
+                                    <button
+                                        x-on:click="setRiderOrdersTab('active')"
+                                        :class="riderOrdersTabClass('active')"
+                                        class="flex-1 rounded-md px-2 py-1.5 text-xs font-semibold transition"
+                                    >Active</button>
+                                    <button
+                                        x-on:click="setRiderOrdersTab('past')"
+                                        :class="riderOrdersTabClass('past')"
+                                        class="flex-1 rounded-md px-2 py-1.5 text-xs font-semibold transition"
+                                    >Past</button>
+                                    <button
+                                        x-on:click="setRiderOrdersTab('date_range')"
+                                        :class="riderOrdersTabClass('date_range')"
+                                        class="flex-1 rounded-md px-2 py-1.5 text-xs font-semibold transition"
+                                    >Date Range</button>
+                                </div>
+
+                                <div x-show="riderOrdersTab === 'date_range'" class="space-y-2">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <label class="space-y-1">
+                                            <span class="text-[11px] text-void-400">From</span>
+                                            <input
+                                                type="date"
+                                                x-model="riderOrdersFrom"
+                                                class="w-full rounded-md border border-void-600 bg-void-900 px-2.5 py-1.5 text-xs text-void-100 focus:border-neon-400/50 focus:outline-none focus:ring-1 focus:ring-neon-400/30"
+                                            >
+                                        </label>
+                                        <label class="space-y-1">
+                                            <span class="text-[11px] text-void-400">To</span>
+                                            <input
+                                                type="date"
+                                                x-model="riderOrdersTo"
+                                                class="w-full rounded-md border border-void-600 bg-void-900 px-2.5 py-1.5 text-xs text-void-100 focus:border-neon-400/50 focus:outline-none focus:ring-1 focus:ring-neon-400/30"
+                                            >
+                                        </label>
+                                    </div>
+
+                                    <div class="flex gap-2">
+                                        <button
+                                            x-on:click="applyRiderDateRange"
+                                            :disabled="!canApplyRiderDateRange() || riderOrdersLoading"
+                                            class="rounded-md bg-neon-400 px-2.5 py-1 text-xs font-bold text-void-950 transition hover:bg-neon-300 disabled:cursor-not-allowed disabled:opacity-60"
+                                        >Apply</button>
+                                        <button
+                                            x-on:click="clearRiderDateRange"
+                                            :disabled="riderOrdersLoading"
+                                            class="rounded-md border border-void-600 px-2.5 py-1 text-xs font-medium text-void-200 transition hover:border-void-500 hover:text-void-100 disabled:cursor-not-allowed disabled:opacity-60"
+                                        >Clear</button>
+                                    </div>
+
+                                    <p x-show="riderDateRangeInvalid()" class="text-xs text-red-300">Start date must be before end date.</p>
+                                </div>
+
+                                <p x-show="riderOrdersLoading" class="text-sm text-void-400">Loading your orders...</p>
+
+                                <div x-show="!riderOrdersLoading" class="space-y-2">
+                                    <template x-for="order in riderOrders" :key="order.uuid">
+                                        <div class="rounded-lg border border-void-700 bg-void-900/40 p-3">
+                                            <div class="flex items-center justify-between gap-2">
+                                                <p class="text-sm font-semibold text-void-100" x-text="shortOrderUuid(order)"></p>
+                                                <p
+                                                    class="rounded-full border px-2 py-0.5 text-[11px] font-medium"
+                                                    :class="riderOrderStatusClass(order)"
+                                                    x-text="riderOrderStatus(order)"
+                                                ></p>
+                                            </div>
+                                            <div class="mt-1 flex items-center justify-between">
+                                                <p class="text-xs text-void-400" x-text="orderVehicleLabel(order)"></p>
+                                                <p class="text-xs text-void-500" x-text="formatOrderDate(order.created_at)"></p>
+                                            </div>
+                                            <p x-show="order.driver?.name" class="mt-1 text-xs text-void-400" x-text="'Driver: ' + order.driver?.name"></p>
+                                            <button
+                                                x-on:click="focusOrderOnMap(order)"
+                                                class="mt-2 rounded-md border border-void-600 px-2.5 py-1 text-xs font-medium text-void-200 transition hover:border-void-500 hover:text-void-100"
+                                            >Preview</button>
+                                        </div>
+                                    </template>
+
+                                    <p x-show="riderOrders.length === 0" class="text-sm text-void-400" x-text="riderOrdersEmptyMessage()"></p>
+                                </div>
+                            </div>
                         </div>
 
                         {{-- ─ IDLE DRIVER ─ --}}
