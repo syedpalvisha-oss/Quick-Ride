@@ -8,13 +8,13 @@ use App\Http\Controllers\Api\CreateUserController;
 use App\Http\Controllers\Api\CreateVehicleController;
 use App\Http\Controllers\Api\DeletePersonalAccessTokenController;
 use App\Http\Controllers\Api\GetCurrentUserController;
+use App\Http\Controllers\Api\GetFareCalculationController;
 use App\Http\Controllers\Api\GetOrderController;
 use App\Http\Controllers\Api\GetOrdersController;
 use App\Http\Controllers\Api\MatchOrderController;
 use App\Http\Controllers\Api\PickupOrderController;
 use App\Http\Controllers\Api\UpdateOrderReviewController;
 use App\Http\Controllers\Api\UpdateUserController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/user', GetCurrentUserController::class)
@@ -49,3 +49,4 @@ Route::post('orders/{order:uuid}/review', UpdateOrderReviewController::class)
     ->can('review', 'order');
 Route::post('vehicles', CreateVehicleController::class)
     ->middleware('auth:sanctum');
+Route::get('/calculate-fare', GetFareCalculationController::class);
