@@ -4,7 +4,6 @@ namespace App\Policies;
 
 use App\Models\Order;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class OrderPolicy
 {
@@ -14,6 +13,7 @@ class OrderPolicy
             return true;
         }
     }
+
     /**
      * Determine whether the user can view any models.
      */
@@ -31,6 +31,7 @@ class OrderPolicy
             || $user->getKey() === $order->user_id) {
             return true;
         }
+
         return false;
     }
 
@@ -39,7 +40,7 @@ class OrderPolicy
      */
     public function create(User $user): bool
     {
-        return false === $user->orders()->whereNull('completed_at')->exists();
+        return $user->orders()->whereNull('completed_at')->exists() === false;
     }
 
     /**
@@ -51,6 +52,7 @@ class OrderPolicy
             || $user->getKey() === $order->user_id) {
             return true;
         }
+
         return false;
     }
 
@@ -90,6 +92,7 @@ class OrderPolicy
             || $user->getKey() === $order->user_id) {
             return true;
         }
+
         return false;
     }
 
@@ -98,7 +101,30 @@ class OrderPolicy
         if ($user->getKey() === $order->user_id) {
             return false;
         }
-        return true;
+
+        if (empty($user->vehicle_id)) {
+            return false;
+        }
+
+        $activeVehicle = $user->vehicle()->first();
+
+        if (! $activeVehicle) {
+            return false;
+        }
+
+        if (! empty($order->driver_id)
+            || ! empty($order->matched_at)
+            || ! empty($order->pickup_at)
+            || ! empty($order->completed_at)
+            || ! empty($order->cancelled_at)
+            || ! empty($order->driver_cancelled_at)) {
+            return false;
+        }
+
+        $orderVehicleType = (int) ($order->vehicle_type?->value ?? $order->getRawOriginal('vehicle_type'));
+        $activeVehicleType = (int) ($activeVehicle->vehicle_type?->value ?? $activeVehicle->getRawOriginal('vehicle_type'));
+
+        return $activeVehicleType === $orderVehicleType;
     }
 
     public function pickup(User $user, Order $order)
@@ -106,6 +132,7 @@ class OrderPolicy
         if ($user->getKey() === $order->driver_id) {
             return true;
         }
+
         return false;
     }
 
@@ -114,6 +141,7 @@ class OrderPolicy
         if ($user->getKey() === $order->driver_id) {
             return true;
         }
+
         return false;
     }
 

@@ -2,12 +2,12 @@
 
 namespace App\Http\Resources;
 
-use App\Models\User;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
- * @property-read \App\Models\Order $resource
+ * @property-read Order $resource
  */
 class OrderResource extends JsonResource
 {
@@ -20,6 +20,7 @@ class OrderResource extends JsonResource
     {
         return [
             'uuid' => $this->resource->uuid,
+            'vehicle_type' => $this->resource->vehicle_type?->value ?? $this->resource->getRawOriginal('vehicle_type'),
             'matched_at' => $this->resource->matched_at,
             'pickup_at' => $this->resource->pickup_at,
             'completed_at' => $this->resource->completed_at,

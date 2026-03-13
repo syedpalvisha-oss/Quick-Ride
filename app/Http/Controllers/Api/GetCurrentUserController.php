@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Container\Attributes\CurrentUser;
-use Illuminate\Http\Request;
 
 class GetCurrentUserController extends Controller
 {
@@ -15,8 +14,14 @@ class GetCurrentUserController extends Controller
      */
     public function __invoke(
         #[CurrentUser] User $user,
-    )
-    {
-        return new UserResource($user);
+    ): UserResource {
+        return new UserResource(
+            $user->loadCount('vehicles')
+                ->load([
+                    'driverProfile',
+                    'vehicle',
+                    'vehicles' => fn ($query) => $query->latest(),
+                ])
+        );
     }
 }

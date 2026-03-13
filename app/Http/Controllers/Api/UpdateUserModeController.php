@@ -3,25 +3,34 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateUserRequest;
+use App\Http\Requests\UpdateUserModeRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Container\Attributes\CurrentUser;
 
-class UpdateUserController extends Controller
+class UpdateUserModeController extends Controller
 {
     /**
      * Handle the incoming request.
      */
     public function __invoke(
-        UpdateUserRequest $request,
+        UpdateUserModeRequest $request,
         #[CurrentUser] User $user,
     ): UserResource {
-        $user->forceFill($request->validated())->save();
+        $vehicleId = $request->filled('vehicle_id')
+            ? (int) $request->input('vehicle_id')
+            : null;
+
+        if ($vehicleId !== null) {
+            $user->driverProfile()->firstOrCreate();
+        }
+
+        $user->forceFill([
+            'vehicle_id' => $vehicleId,
+        ])->save();
 
         return new UserResource(
-            $user->refresh()
-                ->loadCount('vehicles')
+            $user->loadCount('vehicles')
                 ->load([
                     'driverProfile',
                     'vehicle',

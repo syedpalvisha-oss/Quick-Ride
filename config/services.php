@@ -35,4 +35,12 @@ return [
         ],
     ],
 
+    'stripe' => [
+        'secret' => env('STRIPE_SECRET'),
+        'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
+        'connect' => [
+            'country' => env('STRIPE_CONNECT_COUNTRY', 'US'),
+        ],
+    ],
+
 ];

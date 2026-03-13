@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use App\Enums\VehicleType;
-use Clickbar\Magellan\Data\Geometries\Dimension;
 use Clickbar\Magellan\Data\Geometries\Point;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
@@ -35,7 +34,13 @@ class CreateOrderRequest extends FormRequest
         ];
     }
 
-    public function dropoffLocation() {return new Point(Dimension::DIMENSION_2D, $this->float('dropoff_location.0'), $this->float('dropoff_location.1'), null, null, 4326);}
+    public function dropoffLocation()
+    {
+        return Point::makeGeodetic($this->float('dropoff_location.0'), $this->float('dropoff_location.1'));
+    }
 
-    public function pickupLocation() {return new Point(Dimension::DIMENSION_2D, $this->float('pickup_location.0'), $this->float('pickup_location.1'), null, null, 4326);}
+    public function pickupLocation()
+    {
+        return Point::makeGeodetic($this->float('pickup_location.0'), $this->float('pickup_location.1'));
+    }
 }

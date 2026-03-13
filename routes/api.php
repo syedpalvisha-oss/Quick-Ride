@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CancelOrderController;
 use App\Http\Controllers\Api\CompleteOrderController;
+use App\Http\Controllers\Api\CreateDriverStripeOnboardingLinkController;
 use App\Http\Controllers\Api\CreateOrderController;
 use App\Http\Controllers\Api\CreatePersonalAccessTokenController;
 use App\Http\Controllers\Api\CreateUserController;
@@ -11,10 +12,12 @@ use App\Http\Controllers\Api\GetCurrentUserController;
 use App\Http\Controllers\Api\GetFareCalculationController;
 use App\Http\Controllers\Api\GetOrderController;
 use App\Http\Controllers\Api\GetOrdersController;
+use App\Http\Controllers\Api\HandleStripeConnectWebhookController;
 use App\Http\Controllers\Api\MatchOrderController;
 use App\Http\Controllers\Api\PickupOrderController;
 use App\Http\Controllers\Api\UpdateOrderReviewController;
 use App\Http\Controllers\Api\UpdateUserController;
+use App\Http\Controllers\Api\UpdateUserModeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/user', GetCurrentUserController::class)
@@ -24,6 +27,8 @@ Route::delete('/personal-access-token', DeletePersonalAccessTokenController::cla
     ->middleware('auth:sanctum');
 Route::post('/users', CreateUserController::class);
 Route::put('/users', UpdateUserController::class)
+    ->middleware('auth:sanctum');
+Route::put('/users/mode', UpdateUserModeController::class)
     ->middleware('auth:sanctum');
 Route::get('/orders', GetOrdersController::class)
     ->middleware('auth:sanctum');
@@ -49,4 +54,7 @@ Route::post('orders/{order:uuid}/review', UpdateOrderReviewController::class)
     ->can('review', 'order');
 Route::post('vehicles', CreateVehicleController::class)
     ->middleware('auth:sanctum');
+Route::post('/driver/stripe/onboarding-link', CreateDriverStripeOnboardingLinkController::class)
+    ->middleware('auth:sanctum');
+Route::post('/stripe/webhooks/connect', HandleStripeConnectWebhookController::class);
 Route::get('/calculate-fare', GetFareCalculationController::class);

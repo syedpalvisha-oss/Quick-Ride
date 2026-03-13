@@ -12,19 +12,54 @@ class GetOrdersController extends Controller
 {
     public function __invoke(Request $request)
     {
+        $user = $request->user();
+        $role = $request->string('role')->toString();
+
+        $query = Order::query()
+            ->when($request->query('from'), fn ($builder) => $builder->where('created_at', '>=', $request->date(key: 'from', tz: $request->header('X-Timezone'))))
+            ->when($request->query('to'), fn ($builder) => $builder->where('created_at', '<=', $request->date(key: 'to', tz: $request->header('X-Timezone'))))
+            ->when($request->enum('vehicle_type', VehicleType::class), fn ($builder, $value) => $builder->where('vehicle_type', $value))
+            ->latest();
+
+        if ($role === 'driver') {
+            return OrderResource::collection(
+                $query->with(['user', 'driver'])
+                    ->where('driver_id', $user->getKey())
+                    ->paginate()
+            );
+        }
+
+        if ($role === 'driver_incoming') {
+            $activeVehicle = $user->vehicle()->first();
+
+            if (! $activeVehicle) {
+                return OrderResource::collection(
+                    $query->whereRaw('1 = 0')->paginate()
+                );
+            }
+
+            $activeVehicleType = (int) ($activeVehicle->vehicle_type?->value ?? $activeVehicle->getRawOriginal('vehicle_type'));
+
+            return OrderResource::collection(
+                $query->with('user')
+                    ->where('user_id', '!=', $user->getKey())
+                    ->whereNull('driver_id')
+                    ->whereNull('matched_at')
+                    ->whereNull('pickup_at')
+                    ->whereNull('completed_at')
+                    ->whereNull('cancelled_at')
+                    ->whereNull('driver_cancelled_at')
+                    ->where('vehicle_type', $activeVehicleType)
+                    ->paginate()
+            );
+        }
+
         return OrderResource::collection(
-            Order::query()
-                ->when($request->query('from'), fn($query) => $query->where('created_at', '>=', $request->date(key: 'from', tz: $request->header('X-Timezone'))))
-                ->when($request->query('to'), fn($query) => $query->where('created_at', '<=', $request->date(key: 'to', tz: $request->header('X-Timezone'))))
-                ->when($request->enum('vehicle_type', VehicleType::class), fn($query, $value) => $query->where('vehicle_type', $value))
+            $query
                 ->when(
-                    $request->query('role') === 'driver',
-                    fn($query) => $query->with('driver')->where('driver_id', $request->user()->getKey()),
-                    fn($query) => $query->when(
-                        $request->user()->isAdmin(),
-                        fn($query) => $query,
-                        fn($query) => $query->with('user')->where('user_id', $request->user()->getKey())
-                    )
+                    $user->isAdmin(),
+                    fn ($builder) => $builder->with(['user', 'driver']),
+                    fn ($builder) => $builder->with('user')->where('user_id', $user->getKey())
                 )
                 ->paginate()
         );

@@ -5,6 +5,9 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -14,11 +17,13 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 class User extends Authenticatable implements HasMedia
 {
+    use HasApiTokens;
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
-    use HasApiTokens;
-    use SoftDeletes;
+
     use InteractsWithMedia;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -27,8 +32,10 @@ class User extends Authenticatable implements HasMedia
      */
     protected $fillable = [
         'name',
+        'phone',
         'email',
         'password',
+        'vehicle_id',
     ];
 
     /**
@@ -51,10 +58,11 @@ class User extends Authenticatable implements HasMedia
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'vehicle_id' => 'integer',
         ];
     }
 
-    public static function booted()
+    public static function booted(): void
     {
         static::updating(function (self $model) {
             if ($model->isDirty('email')) {
@@ -63,6 +71,28 @@ class User extends Authenticatable implements HasMedia
         });
     }
 
-    public function orders(){return $this->hasMany(Order::class);}
-    public function isAdmin(){return $this->getKey() === 1;}
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function vehicles(): HasMany
+    {
+        return $this->hasMany(Vehicle::class);
+    }
+
+    public function vehicle(): BelongsTo
+    {
+        return $this->belongsTo(Vehicle::class);
+    }
+
+    public function driverProfile(): HasOne
+    {
+        return $this->hasOne(DriverProfile::class);
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->getKey() === 1;
+    }
 }

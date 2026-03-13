@@ -2,12 +2,11 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\VehicleType;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class CreateVehicleRequest extends FormRequest
+class UpdateUserModeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,13 +24,16 @@ class CreateVehicleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'code' => [
-                'required',
-                'string',
-                'max:64',
-                Rule::unique('vehicles', 'code')->where('user_id', $this->user()->getKey()),
+            'vehicle_id' => [
+                'present',
+                'nullable',
+                'integer',
+                Rule::exists('vehicles', 'id')->where(
+                    fn ($query) => $query
+                        ->where('user_id', $this->user()->getKey())
+                        ->whereNull('deleted_at')
+                ),
             ],
-            'vehicle_type' => ['required', Rule::enum(VehicleType::class)],
         ];
     }
 }
