@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\VehicleType;
 use Clickbar\Magellan\Data\Geometries\Point;
 use Illuminate\Database\Eloquent\Concerns\HasUniqueIds;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,7 +13,7 @@ class Order extends Model
 {
     /** @use HasFactory<\Database\Factories\OrderFactory> */
     use HasFactory;
-    use HasUniqueIds;
+    use HasUuids;
 
     protected function casts()
     {
@@ -33,7 +34,6 @@ class Order extends Model
         static::creating(function (self $model) {
             $model->setUniqueIds();
         });
-        parent::booted();
     }
 
     public function driver(){return $this->belongsTo(User::class, 'driver_id');}
