@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Actions\CreateOrder;
 use App\Enums\VehicleType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateOrderRequest;
@@ -19,14 +20,15 @@ class CreateOrderController extends Controller
     public function __invoke(
         CreateOrderRequest $request,
         #[CurrentUser] User $user,
+        CreateOrder $createOrder,
     )
     {
-        $order = Order::create([
-            'dropoff_location' => $request->dropoffLocation(),
-            'pickup_location' => $request->pickupLocation(),
-            'vehicle_type' => $request->enum('vehicle_type', VehicleType::class),
-            'user_id' => $user->getKey(),
-        ]);
+        $order = $createOrder(
+            $request->dropoffLocation(),
+            $request->pickupLocation(),
+            $request->enum('vehicle_type', VehicleType::class),
+            $user,
+        );
 
         return new OrderResource($order);
     }

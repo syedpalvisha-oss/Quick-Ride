@@ -80,7 +80,10 @@ class OrderPolicy
 
     public function cancel(User $user, Order $order)
     {
-        if ($order->cancelled_at) {
+        if (! empty($order->cancelled_at)
+            || ! empty($order->completed_at)
+            || ! empty($order->driver_cancelled_at)
+            || ! empty($order->pickup_at)) {
             return false;
         }
         if ($user->getKey() === $order->driver_id
