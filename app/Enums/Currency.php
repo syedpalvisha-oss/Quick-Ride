@@ -4,12 +4,12 @@ namespace App\Enums;
 
 enum Currency: string
 {
-    case Eur = 'EUR';
-    case Idr = 'IDR';
-    case Myr = 'MYR';
-    case Php = 'PHP';
-    case Sgd = 'SGD';
-    case Thb = 'THB';
-    case Usd = 'USD';
-    case Vnd = 'VND';
+    case EUR = 'EUR';
+    case IDR = 'IDR';
+    case MYR = 'MYR';
+    case PHP = 'PHP';
+    case SGD = 'SGD';
+    case THB = 'THB';
+    case USD = 'USD';
+    case VND = 'VND';
 }
