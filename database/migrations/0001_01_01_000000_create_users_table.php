@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('phone_verified_at')->nullable();
             $table->string('password')->nullable();
             $table->boolean('prefers_silence')->default(false);
+            $table->integer('active_mode')->default(0);
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();
