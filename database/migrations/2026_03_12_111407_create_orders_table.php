@@ -22,8 +22,6 @@ return new class extends Migration
             $table->timestamp('pickup_at')->nullable();
             $table->timestamp('completed_at')->nullable();
             $table->integer('vehicle_type')->default(0);
-            $table->decimal('fee', 19, 8)->default(0);
-            $table->decimal('fare', 19, 8)->default(0);
             $table->decimal('tip', 19, 8)->default(0);
             $table->string('currency_id')->nullable();
             $table->geometry('pickup_location', 'POINT', 4326)->nullable();
