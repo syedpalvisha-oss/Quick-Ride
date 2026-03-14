@@ -1,59 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# OpenJek
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+OpenJek is a ride-hailing web app built with Laravel 12. It supports rider booking, driver matching, order lifecycle tracking, and Stripe Connect onboarding for drivers.
 
-## About Laravel
+## App URLs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Main app: https://openjek.com.test
+- Dashboard: `/home`
+- Profile: `/profile`
+- API docs (Scramble): `/docs/api`
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Core Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Rider
+- Search pickup and dropoff addresses (OpenStreetMap Nominatim).
+- Pick locations directly from map center pin.
+- Get fare estimates before booking.
+- Book rides and track active ride status.
+- Cancel rides.
+- View order history from dashboard with tabs:
+  - `Active`
+  - `Past`
+  - `Date Range`
 
-## Learning Laravel
+### Driver
+- Switch between rider and driver modes.
+- Select active vehicle.
+- View incoming compatible orders.
+- Match incoming orders.
+- View assigned driver orders.
+- Preview route on map.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Profile
+- Update account details.
+- Manage vehicles.
+- Start Stripe Connect onboarding for payouts.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tech Stack
 
-## Laravel Sponsors
+- PHP 8.5+
+- Laravel 12
+- Alpine.js
+- Tailwind CSS v4
+- Vite
+- PostgreSQL + PostGIS (via Magellan)
+- Redis + Horizon
+- Laravel Sanctum (token auth)
+- Stripe Connect
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Setup
 
-### Premium Partners
+### Prerequisites
+- PHP 8.5+
+- Composer
+- Node.js + npm
+- PostgreSQL with PostGIS enabled
+- Redis
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Install
 
-## Contributing
+```bash
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Or run the bundled setup script:
 
-## Code of Conduct
+```bash
+composer run setup
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Run Locally
 
-## Security Vulnerabilities
+Use one command for app server, queue worker, logs, and Vite:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+composer run dev
+```
 
-## License
+Or run only frontend dev server:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+npm run dev
+```
+
+Build frontend assets:
+
+```bash
+npm run build
+```
+
+## API Overview
+
+Authentication uses Sanctum bearer tokens.
+
+### Auth and User
+- `POST /api/personal-access-tokens` login
+- `DELETE /api/personal-access-token` logout
+- `POST /api/users` register
+- `GET /api/user` current user
+- `PUT /api/users` update profile
+- `PUT /api/users/mode` switch rider/driver mode
+
+### Orders
+- `GET /api/orders` list orders
+- `POST /api/orders` create order
+- `GET /api/orders/{uuid}` order detail
+- `POST /api/orders/{uuid}/cancel` cancel order
+- `POST /api/orders/{uuid}/match` driver match order
+- `POST /api/orders/{uuid}/pickup` mark pickup
+- `POST /api/orders/{uuid}/complete` complete order
+- `POST /api/orders/{uuid}/review` submit review
+
+### Order list filters (`GET /api/orders`)
+- `role=driver` for driver assigned orders
+- `role=driver_incoming` for matchable incoming orders
+- `status=active|past` for rider history tabs
+- `from=YYYY-MM-DD&to=YYYY-MM-DD` for rider date range filter
+- `vehicle_type` optional vehicle filter
+
+`from` and `to` are interpreted using `X-Timezone` request header.
+
+### Fare and Driver Tools
+- `GET /api/calculate-fare`
+- `POST /api/vehicles`
+- `POST /api/driver/stripe/onboarding-link`
+- `POST /api/stripe/webhooks/connect`
+
+## Testing and Quality
+
+Run tests:
+
+```bash
+php artisan test --compact
+```
+
+Run code formatting:
+
+```bash
+vendor/bin/pint --format agent
+```
+
+## Notes
+
+- If frontend changes are not visible, run `npm run dev` or `npm run build`.
+- The app is served by Laravel Herd at `https://openjek.com.test`.
