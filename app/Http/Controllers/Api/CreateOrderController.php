@@ -7,7 +7,6 @@ use App\Enums\VehicleType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateOrderRequest;
 use App\Http\Resources\OrderResource;
-use App\Models\Order;
 use App\Models\User;
 use Illuminate\Container\Attributes\CurrentUser;
 use Illuminate\Http\Request;
@@ -21,8 +20,7 @@ class CreateOrderController extends Controller
         CreateOrderRequest $request,
         #[CurrentUser] User $user,
         CreateOrder $createOrder,
-    )
-    {
+    ) {
         $order = $createOrder(
             $request->dropoffLocation(),
             $request->pickupLocation(),

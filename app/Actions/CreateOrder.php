@@ -17,8 +17,7 @@ class CreateOrder
         Point $dropoffLocation,
         VehicleType $vehicleType,
         User $user
-    )
-    {
+    ) {
         return Order::create([
             'dropoff_location' => $dropoffLocation,
             'pickup_location' => $pickupLocation,

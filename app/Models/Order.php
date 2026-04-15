@@ -4,15 +4,16 @@ namespace App\Models;
 
 use App\Enums\VehicleType;
 use Clickbar\Magellan\Data\Geometries\Point;
-use Illuminate\Database\Eloquent\Concerns\HasUniqueIds;
+use Database\Factories\OrderFactory;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    /** @use HasFactory<\Database\Factories\OrderFactory> */
+    /** @use HasFactory<OrderFactory> */
     use HasFactory;
+
     use HasUuids;
 
     protected function casts()
@@ -36,9 +37,20 @@ class Order extends Model
         });
     }
 
-    public function driver(){return $this->belongsTo(User::class, 'driver_id');}
-    public function user(){return $this->belongsTo(User::class);}
-    public function orderMessages(){return $this->hasMany(OrderMessage::class);}
+    public function driver()
+    {
+        return $this->belongsTo(User::class, 'driver_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function orderMessages()
+    {
+        return $this->hasMany(OrderMessage::class);
+    }
 
     public function uniqueIds()
     {

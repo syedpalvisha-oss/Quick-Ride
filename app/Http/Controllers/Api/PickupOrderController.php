@@ -15,6 +15,7 @@ class PickupOrderController extends Controller
     public function __invoke(Order $order)
     {
         $order->touch('pickup_at');
+
         return new OrderResource($order);
     }
 }

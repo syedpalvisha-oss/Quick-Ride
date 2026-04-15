@@ -17,13 +17,13 @@ class CancelOrderController extends Controller
     public function __invoke(
         #[CurrentUser] User $user,
         Order $order,
-    )
-    {
+    ) {
         if ($order->user_id == $user->getKey()) {
             $order->touch('cancelled_at');
-        } else if ($order->driver_id == $user->getKey()) {
+        } elseif ($order->driver_id == $user->getKey()) {
             $order->touch('driver_cancelled_at');
         }
+
         return new OrderResource($order);
     }
 }

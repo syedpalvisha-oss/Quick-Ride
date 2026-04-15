@@ -16,6 +16,7 @@ class CompleteOrderController extends Controller
             'review' => $request->json('review'),
             'completed_at' => now(),
         ]);
+
         return new OrderResource($order);
     }
 }

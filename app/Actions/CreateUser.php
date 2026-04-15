@@ -14,8 +14,7 @@ class CreateUser
         string $phone,
         ?string $email = null,
         ?string $password = null,
-    )
-    {
+    ) {
         return User::create([
             'name' => $name,
             'email' => $email,

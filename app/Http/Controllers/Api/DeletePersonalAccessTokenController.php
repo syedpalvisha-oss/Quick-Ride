@@ -14,9 +14,9 @@ class DeletePersonalAccessTokenController extends Controller
      */
     public function __invoke(
         #[CurrentUser] User $user,
-    )
-    {
+    ) {
         $user->currentAccessToken()->delete();
+
         return response()->noContent();
     }
 }
