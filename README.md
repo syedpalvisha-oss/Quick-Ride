@@ -1,4 +1,4 @@
-# Quick-Ride 🚗
+# Quick-Ride 
 
 ## Problem Statement
 Urban ride coordination is inefficient when managing multiple riders, drivers, and scheduling constraints manually. There is a need for a structured system to streamline ride allocation and tracking.
