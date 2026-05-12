@@ -1,0 +1,651 @@
+ride_id,user_id,date,time,hour,day_of_week,pickup_location,drop_location,fare_amount,ride_status,payment_method
+QR10001,U441,2023-10-25,17:18:16,17,Wednesday,"Central Station",Downtown/CBD,18.84,Completed,"Debit Card"
+QR10002,U473,2023-12-21,08:13:06,8,Thursday,"Central Station",Airport,18.16,Completed,UPI
+QR10003,U503,2023-12-14,02:38:48,2,Thursday,"Shopping Mall","University Campus",19.1,Completed,Wallet
+QR10004,U822,2023-11-25,18:03:07,18,Saturday,Downtown/CBD,Airport,16.28,Completed,UPI
+QR10005,U613,2023-12-25,16:34:20,16,Monday,"Central Station","Tech Park",10.85,Completed,"Credit Card"
+QR10006,U930,2023-12-06,21:21:54,21,Wednesday,"University Campus",Airport,13.03,Completed,"Credit Card"
+QR10007,U731,2023-11-27,18:50:38,18,Monday,Downtown/CBD,"Shopping Mall",0,Cancelled,UPI
+QR10008,U508,2023-11-02,16:26:21,16,Thursday,"Tech Park","University Campus",22.93,Completed,"Debit Card"
+QR10009,U294,2023-10-05,12:45:44,12,Thursday,"University Campus",Downtown/CBD,25.33,Completed,UPI
+QR10010,U441,2023-11-28,14:11:28,14,Tuesday,"Shopping Mall","Central Station",14.44,Completed,"Credit Card"
+QR10011,U719,2023-10-28,10:52:30,10,Saturday,"Shopping Mall","Central Station",0,Cancelled,Cash
+QR10012,U583,2023-10-23,22:39:35,22,Monday,Airport,"Tech Park",0,Cancelled,UPI
+QR10013,U320,2023-10-15,19:11:18,19,Sunday,Airport,"Central Station",19.19,Completed,UPI
+QR10014,U172,2023-10-31,13:45:01,13,Tuesday,"Central Station","Suburban Residential",0,Cancelled,UPI
+QR10015,U707,2023-11-30,18:05:13,18,Thursday,"Shopping Mall","University Campus",21.5,Completed,"Debit Card"
+QR10016,U483,2023-11-12,21:36:32,21,Sunday,"Hospital District",Airport,31.07,Completed,Wallet
+QR10017,U453,2023-10-28,12:26:08,12,Saturday,"Hospital District","Suburban Residential",14.27,Completed,"Credit Card"
+QR10018,U333,2023-12-16,19:10:57,19,Saturday,"Hospital District",Downtown/CBD,31.01,Completed,UPI
+QR10019,U728,2023-10-28,18:45:08,18,Saturday,Downtown/CBD,"Hospital District",23.69,Completed,"Credit Card"
+QR10020,U113,2023-10-02,00:55:10,0,Monday,"University Campus",Downtown/CBD,0,Cancelled,"Credit Card"
+QR10021,U522,2023-12-11,18:42:58,18,Monday,"Tech Park",Airport,40.12,Completed,"Credit Card"
+QR10022,U131,2023-12-13,18:45:08,18,Wednesday,"University Campus","Shopping Mall",18.84,Completed,UPI
+QR10023,U880,2023-11-29,13:16:50,13,Wednesday,Airport,"Central Station",17.14,Completed,UPI
+QR10024,U978,2023-12-27,09:52:20,9,Wednesday,"Suburban Residential","University Campus",0,Cancelled,UPI
+QR10025,U414,2023-10-06,19:44:01,19,Friday,Downtown/CBD,"Central Station",0,Cancelled,"Credit Card"
+QR10026,U489,2023-10-30,19:45:51,19,Monday,Airport,"Tech Park",27.18,Completed,UPI
+QR10027,U508,2023-11-20,16:42:57,16,Monday,"Suburban Residential","Shopping Mall",23.2,Completed,"Debit Card"
+QR10028,U223,2023-11-21,18:14:55,18,Tuesday,"Tech Park","Central Station",34.3,Completed,UPI
+QR10029,U273,2023-10-27,12:40:18,12,Friday,Airport,"Hospital District",19.51,Completed,"Credit Card"
+QR10030,U452,2023-12-06,17:59:49,17,Wednesday,Airport,"Tech Park",0,Cancelled,"Credit Card"
+QR10031,U938,2023-11-23,17:25:02,17,Thursday,"Suburban Residential","Tech Park",26.58,Completed,"Debit Card"
+QR10032,U466,2023-11-07,21:06:05,21,Tuesday,Downtown/CBD,"Tech Park",0,Cancelled,"Credit Card"
+QR10033,U480,2023-12-09,20:38:20,20,Saturday,"Shopping Mall",Airport,28.05,Completed,UPI
+QR10034,U959,2023-10-02,18:10:07,18,Monday,"Central Station","University Campus",34.83,Completed,"Debit Card"
+QR10035,U204,2023-11-16,16:03:24,16,Thursday,"Suburban Residential","University Campus",8.44,Completed,Cash
+QR10036,U842,2023-12-08,21:07:16,21,Friday,"Suburban Residential","Central Station",29.95,Completed,UPI
+QR10037,U468,2023-11-13,10:47:27,10,Monday,Airport,"University Campus",0,Cancelled,"Credit Card"
+QR10038,U273,2023-10-24,13:04:51,13,Tuesday,"University Campus","Tech Park",17.06,Completed,Cash
+QR10039,U398,2023-11-08,16:57:54,16,Wednesday,Downtown/CBD,Airport,8.53,Completed,Wallet
+QR10040,U386,2023-10-03,19:38:48,19,Tuesday,"Central Station","Tech Park",17.72,Completed,"Credit Card"
+QR10041,U527,2023-10-25,10:28:23,10,Wednesday,Airport,"Tech Park",0,Cancelled,UPI
+QR10042,U930,2023-12-09,20:02:45,20,Saturday,"Central Station","Suburban Residential",20.24,Completed,"Debit Card"
+QR10043,U707,2023-11-08,07:06:10,7,Wednesday,"Hospital District","University Campus",18.83,Completed,"Credit Card"
+QR10044,U655,2023-10-22,19:55:10,19,Sunday,"University Campus","Tech Park",21.88,Completed,UPI
+QR10045,U441,2023-10-13,13:56:24,13,Friday,Airport,"University Campus",0,Cancelled,UPI
+QR10046,U809,2023-11-09,13:50:53,13,Thursday,"Shopping Mall",Downtown/CBD,26.15,Completed,UPI
+QR10047,U725,2023-12-11,20:18:20,20,Monday,"Tech Park","Suburban Residential",0,Cancelled,"Debit Card"
+QR10048,U818,2023-10-15,13:57:33,13,Sunday,"Tech Park","University Campus",14.59,Completed,"Debit Card"
+QR10049,U920,2023-11-12,20:06:13,20,Sunday,"Hospital District","Shopping Mall",0,Cancelled,UPI
+QR10050,U509,2023-12-13,20:13:25,20,Wednesday,"Central Station","Tech Park",27.25,Completed,Wallet
+QR10051,U885,2023-10-03,00:32:32,0,Tuesday,"Shopping Mall","Central Station",21.34,Completed,UPI
+QR10052,U491,2023-10-31,02:28:14,2,Tuesday,"Hospital District","Shopping Mall",9.98,Completed,"Debit Card"
+QR10053,U418,2023-11-18,23:24:39,23,Saturday,"Tech Park","Hospital District",0,Cancelled,"Credit Card"
+QR10054,U580,2023-12-21,06:58:22,6,Thursday,"Central Station",Downtown/CBD,10.73,Completed,"Credit Card"
+QR10055,U248,2023-11-16,17:44:14,17,Thursday,"Suburban Residential","Central Station",23.14,Completed,"Credit Card"
+QR10056,U852,2023-12-27,22:28:18,22,Wednesday,Airport,"Hospital District",24.64,Completed,"Credit Card"
+QR10057,U579,2023-10-26,21:54:58,21,Thursday,"Hospital District",Airport,16.02,Completed,UPI
+QR10058,U778,2023-11-06,02:20:43,2,Monday,"Central Station","Hospital District",0,Cancelled,UPI
+QR10059,U910,2023-12-06,09:00:17,9,Wednesday,"Tech Park",Downtown/CBD,20.75,Completed,Wallet
+QR10060,U140,2023-12-27,08:23:57,8,Wednesday,Downtown/CBD,"Shopping Mall",25.34,Completed,"Credit Card"
+QR10061,U232,2023-10-16,07:12:46,7,Monday,"Shopping Mall",Airport,16.01,Completed,"Debit Card"
+QR10062,U406,2023-10-01,11:09:41,11,Sunday,Airport,"Suburban Residential",10.01,Completed,Wallet
+QR10063,U947,2023-12-29,17:52:02,17,Friday,"Central Station",Downtown/CBD,21.07,Completed,Wallet
+QR10064,U308,2023-11-19,10:09:12,10,Sunday,"University Campus",Downtown/CBD,14.95,Completed,UPI
+QR10065,U710,2023-11-30,18:22:30,18,Thursday,Airport,"Suburban Residential",0,Cancelled,"Debit Card"
+QR10066,U803,2023-11-26,20:49:00,20,Sunday,"Suburban Residential","Shopping Mall",15.76,Completed,Wallet
+QR10067,U513,2023-10-06,08:08:26,8,Friday,"University Campus",Airport,8.39,Completed,Cash
+QR10068,U290,2023-12-07,14:09:07,14,Thursday,"Suburban Residential",Airport,12.1,Completed,UPI
+QR10069,U315,2023-11-21,06:10:21,6,Tuesday,"Tech Park",Downtown/CBD,15.41,Completed,Wallet
+QR10070,U946,2023-11-16,17:38:34,17,Thursday,"Suburban Residential","Hospital District",20.16,Completed,UPI
+QR10071,U400,2023-11-18,08:48:21,8,Saturday,Downtown/CBD,"Central Station",20.27,Completed,"Credit Card"
+QR10072,U873,2023-11-05,19:54:03,19,Sunday,"Central Station","Shopping Mall",28.54,Completed,UPI
+QR10073,U987,2023-10-02,13:11:29,13,Monday,"Shopping Mall",Downtown/CBD,24.91,Completed,"Credit Card"
+QR10074,U188,2023-12-25,01:17:22,1,Monday,"Tech Park","Central Station",9.86,Completed,"Debit Card"
+QR10075,U383,2023-12-29,07:14:27,7,Friday,"Suburban Residential","Shopping Mall",9.64,Completed,"Debit Card"
+QR10076,U919,2023-11-23,17:40:41,17,Thursday,Airport,"Hospital District",23.84,Completed,UPI
+QR10077,U564,2023-11-29,00:19:56,0,Wednesday,"Hospital District","University Campus",0,Cancelled,UPI
+QR10078,U788,2023-11-23,14:15:26,14,Thursday,"University Campus","Hospital District",20.92,Completed,UPI
+QR10079,U609,2023-10-18,14:37:48,14,Wednesday,Downtown/CBD,"Central Station",24.56,Completed,Cash
+QR10080,U759,2023-10-11,20:12:34,20,Wednesday,Airport,"Suburban Residential",0,Cancelled,UPI
+QR10081,U101,2023-11-03,01:35:59,1,Friday,"Suburban Residential",Downtown/CBD,15.05,Completed,Wallet
+QR10082,U281,2023-10-13,17:06:43,17,Friday,Airport,"Hospital District",0,Cancelled,"Debit Card"
+QR10083,U852,2023-12-23,19:43:52,19,Saturday,Airport,Downtown/CBD,33.82,Completed,"Debit Card"
+QR10084,U469,2023-12-18,10:42:19,10,Monday,Airport,"Suburban Residential",17.38,Completed,"Credit Card"
+QR10085,U238,2023-11-03,01:25:14,1,Friday,"Shopping Mall","Tech Park",9.65,Completed,UPI
+QR10086,U480,2023-11-01,20:21:02,20,Wednesday,"Suburban Residential","Central Station",0,Cancelled,"Credit Card"
+QR10087,U301,2023-10-28,16:18:06,16,Saturday,Downtown/CBD,Airport,12.34,Completed,UPI
+QR10088,U131,2023-12-03,18:31:30,18,Sunday,"Central Station","Hospital District",36.36,Completed,UPI
+QR10089,U296,2023-11-24,11:01:34,11,Friday,"Tech Park","Suburban Residential",8.63,Completed,UPI
+QR10090,U938,2023-11-17,17:59:52,17,Friday,"Central Station","Suburban Residential",17.21,Completed,UPI
+QR10091,U962,2023-12-18,21:57:45,21,Monday,"Tech Park","Central Station",0,Cancelled,UPI
+QR10092,U856,2023-10-02,22:13:18,22,Monday,Airport,"Suburban Residential",0,Cancelled,"Debit Card"
+QR10093,U330,2023-12-12,12:07:57,12,Tuesday,"Hospital District","Central Station",0,Cancelled,Cash
+QR10094,U650,2023-12-24,21:56:11,21,Sunday,"Suburban Residential",Downtown/CBD,21,Completed,Cash
+QR10095,U432,2023-11-19,07:42:44,7,Sunday,"Tech Park","Suburban Residential",15.7,Completed,UPI
+QR10096,U188,2023-10-27,20:51:40,20,Friday,"Shopping Mall","Hospital District",29.24,Completed,UPI
+QR10097,U842,2023-12-03,22:12:17,22,Sunday,"Shopping Mall","University Campus",0,Cancelled,UPI
+QR10098,U132,2023-12-09,14:41:35,14,Saturday,"Tech Park",Downtown/CBD,10.63,Completed,UPI
+QR10099,U163,2023-11-17,20:19:11,20,Friday,Airport,"Suburban Residential",32.95,Completed,UPI
+QR10100,U354,2023-11-19,21:52:33,21,Sunday,"Hospital District","Suburban Residential",19.98,Completed,UPI
+QR10101,U570,2023-10-29,16:48:27,16,Sunday,"Hospital District",Airport,19.51,Completed,"Credit Card"
+QR10102,U357,2023-11-19,09:06:57,9,Sunday,"Suburban Residential","Tech Park",27.05,Completed,"Credit Card"
+QR10103,U401,2023-10-25,00:58:46,0,Wednesday,"Central Station",Airport,0,Cancelled,"Credit Card"
+QR10104,U121,2023-12-27,21:03:55,21,Wednesday,"Central Station","Tech Park",25.07,Completed,UPI
+QR10105,U516,2023-11-10,10:57:23,10,Friday,Downtown/CBD,"Suburban Residential",19.3,Completed,Cash
+QR10106,U362,2023-10-02,01:37:28,1,Monday,Downtown/CBD,Airport,15.62,Completed,UPI
+QR10107,U355,2023-10-01,21:19:48,21,Sunday,"Tech Park",Downtown/CBD,0,Cancelled,Wallet
+QR10108,U628,2023-11-30,19:58:24,19,Thursday,"Central Station","Shopping Mall",12.11,Completed,UPI
+QR10109,U161,2023-10-17,17:47:42,17,Tuesday,Airport,Downtown/CBD,21.73,Completed,Wallet
+QR10110,U171,2023-10-13,15:12:14,15,Friday,"Tech Park","Shopping Mall",15.41,Completed,Wallet
+QR10111,U562,2023-12-06,02:36:48,2,Wednesday,Downtown/CBD,"Suburban Residential",0,Cancelled,Cash
+QR10112,U352,2023-11-07,23:12:27,23,Tuesday,"Central Station","Suburban Residential",8.45,Completed,UPI
+QR10113,U229,2023-10-22,16:33:45,16,Sunday,"University Campus","Hospital District",16.21,Completed,UPI
+QR10114,U648,2023-11-28,15:35:22,15,Tuesday,"Shopping Mall",Airport,25.21,Completed,Wallet
+QR10115,U501,2023-12-07,07:28:31,7,Thursday,"Shopping Mall","University Campus",14.03,Completed,UPI
+QR10116,U321,2023-10-19,17:14:03,17,Thursday,"Shopping Mall","University Campus",0,Cancelled,"Credit Card"
+QR10117,U160,2023-11-18,12:17:55,12,Saturday,"Hospital District",Airport,17.21,Completed,UPI
+QR10118,U590,2023-11-06,13:27:51,13,Monday,Downtown/CBD,"Shopping Mall",0,Cancelled,"Credit Card"
+QR10119,U639,2023-10-30,10:30:49,10,Monday,Airport,"Suburban Residential",24.61,Completed,"Credit Card"
+QR10120,U315,2023-12-25,00:45:41,0,Monday,"University Campus","Shopping Mall",25.25,Completed,"Credit Card"
+QR10121,U381,2023-11-03,19:32:33,19,Friday,"Tech Park",Downtown/CBD,25.6,Completed,Wallet
+QR10122,U703,2023-11-05,16:34:17,16,Sunday,"University Campus","Tech Park",12.2,Completed,UPI
+QR10123,U970,2023-12-21,09:05:16,9,Thursday,"Central Station",Downtown/CBD,9.95,Completed,"Credit Card"
+QR10124,U201,2023-10-29,20:49:14,20,Sunday,"Central Station","University Campus",25.9,Completed,Wallet
+QR10125,U922,2023-10-16,20:03:26,20,Monday,"Central Station","Shopping Mall",21.86,Completed,Cash
+QR10126,U836,2023-10-10,02:45:04,2,Tuesday,Airport,"Tech Park",0,Cancelled,UPI
+QR10127,U881,2023-12-15,16:32:56,16,Friday,"Hospital District","Tech Park",0,Cancelled,UPI
+QR10128,U812,2023-11-02,06:44:28,6,Thursday,"Suburban Residential","Central Station",27.47,Completed,"Credit Card"
+QR10129,U403,2023-11-03,12:55:46,12,Friday,Downtown/CBD,"Shopping Mall",27.37,Completed,UPI
+QR10130,U707,2023-12-29,09:37:31,9,Friday,"Central Station","Shopping Mall",0,Cancelled,"Debit Card"
+QR10131,U838,2023-11-20,15:40:19,15,Monday,"University Campus","Tech Park",23.38,Completed,UPI
+QR10132,U796,2023-10-11,18:31:28,18,Wednesday,"Tech Park","University Campus",36.62,Completed,UPI
+QR10133,U979,2023-11-25,11:09:48,11,Saturday,"Suburban Residential",Downtown/CBD,8.87,Completed,Cash
+QR10134,U724,2023-11-04,18:08:46,18,Saturday,Downtown/CBD,Airport,27.54,Completed,UPI
+QR10135,U664,2023-10-18,07:29:58,7,Wednesday,"University Campus","Suburban Residential",22.27,Completed,"Debit Card"
+QR10136,U731,2023-10-26,18:04:44,18,Thursday,Downtown/CBD,"Central Station",14.57,Completed,"Credit Card"
+QR10137,U579,2023-12-08,15:32:28,15,Friday,"Hospital District","University Campus",0,Cancelled,UPI
+QR10138,U344,2023-12-08,19:08:57,19,Friday,"University Campus","Suburban Residential",32.84,Completed,Wallet
+QR10139,U463,2023-11-02,16:35:05,16,Thursday,Airport,"University Campus",0,Cancelled,UPI
+QR10140,U238,2023-10-13,17:22:40,17,Friday,"Tech Park","University Campus",0,Cancelled,Cash
+QR10141,U670,2023-10-14,01:16:18,1,Saturday,"Shopping Mall","Hospital District",8.78,Completed,UPI
+QR10142,U145,2023-11-07,11:51:15,11,Tuesday,Downtown/CBD,"Shopping Mall",8.98,Completed,Cash
+QR10143,U526,2023-10-23,18:14:37,18,Monday,"Hospital District",Airport,28.47,Completed,"Debit Card"
+QR10144,U791,2023-10-19,18:41:28,18,Thursday,Downtown/CBD,Airport,22.3,Completed,Wallet
+QR10145,U539,2023-10-20,12:28:04,12,Friday,Airport,"Shopping Mall",0,Cancelled,UPI
+QR10146,U117,2023-12-16,01:49:07,1,Saturday,"Hospital District","Suburban Residential",0,Cancelled,Wallet
+QR10147,U794,2023-12-02,15:51:33,15,Saturday,"Hospital District",Airport,10.52,Completed,UPI
+QR10148,U905,2023-12-21,20:34:43,20,Thursday,"University Campus","Shopping Mall",33.26,Completed,"Credit Card"
+QR10149,U448,2023-10-17,18:24:30,18,Tuesday,"Suburban Residential","Hospital District",19.34,Completed,"Debit Card"
+QR10150,U501,2023-10-16,23:09:10,23,Monday,"Hospital District",Airport,15.67,Completed,"Credit Card"
+QR10151,U448,2023-10-15,16:17:21,16,Sunday,"Hospital District",Airport,0,Cancelled,UPI
+QR10152,U378,2023-10-01,01:56:31,1,Sunday,"Shopping Mall","University Campus",15.31,Completed,UPI
+QR10153,U602,2023-11-07,23:54:13,23,Tuesday,"Central Station","University Campus",0,Cancelled,UPI
+QR10154,U756,2023-11-20,20:16:08,20,Monday,Airport,"Shopping Mall",31.88,Completed,"Credit Card"
+QR10155,U194,2023-12-17,23:23:01,23,Sunday,"Shopping Mall",Downtown/CBD,20.89,Completed,UPI
+QR10156,U378,2023-10-29,12:00:02,12,Sunday,"Central Station",Airport,21.13,Completed,Cash
+QR10157,U324,2023-10-19,23:40:17,23,Thursday,"University Campus",Downtown/CBD,15.95,Completed,"Debit Card"
+QR10158,U789,2023-10-18,20:42:37,20,Wednesday,Airport,"Hospital District",0,Cancelled,"Credit Card"
+QR10159,U187,2023-10-23,10:53:04,10,Monday,"Central Station",Airport,20.23,Completed,"Debit Card"
+QR10160,U656,2023-10-06,15:17:43,15,Friday,"Central Station",Airport,16.85,Completed,UPI
+QR10161,U224,2023-11-02,02:31:40,2,Thursday,"Central Station","Suburban Residential",14.6,Completed,Cash
+QR10162,U788,2023-11-29,10:53:41,10,Wednesday,"Suburban Residential","Tech Park",20.27,Completed,UPI
+QR10163,U197,2023-10-09,19:22:20,19,Monday,"Central Station","Suburban Residential",0,Cancelled,Cash
+QR10164,U335,2023-11-12,15:05:29,15,Sunday,"Suburban Residential",Downtown/CBD,18.05,Completed,UPI
+QR10165,U600,2023-12-16,17:16:51,17,Saturday,"Hospital District","Central Station",16.15,Completed,"Credit Card"
+QR10166,U663,2023-12-21,20:50:56,20,Thursday,"Suburban Residential","University Campus",16.75,Completed,"Debit Card"
+QR10167,U819,2023-12-15,17:09:35,17,Friday,"Tech Park","Central Station",22.56,Completed,"Debit Card"
+QR10168,U959,2023-10-13,15:55:48,15,Friday,Airport,Downtown/CBD,0,Cancelled,UPI
+QR10169,U665,2023-11-27,17:23:47,17,Monday,"University Campus",Airport,22.62,Completed,UPI
+QR10170,U543,2023-11-09,21:39:38,21,Thursday,"Tech Park","Hospital District",0,Cancelled,"Credit Card"
+QR10171,U688,2023-12-26,21:46:25,21,Tuesday,"Suburban Residential","Tech Park",26.87,Completed,"Credit Card"
+QR10172,U200,2023-12-13,18:19:50,18,Wednesday,Airport,Downtown/CBD,0,Cancelled,Wallet
+QR10173,U920,2023-11-17,11:14:47,11,Friday,"University Campus","Suburban Residential",23.84,Completed,UPI
+QR10174,U818,2023-11-06,01:46:14,1,Monday,Airport,Downtown/CBD,9.4,Completed,UPI
+QR10175,U723,2023-10-05,11:11:14,11,Thursday,Downtown/CBD,"Central Station",15.19,Completed,"Debit Card"
+QR10176,U388,2023-11-22,07:18:03,7,Wednesday,"University Campus","Central Station",9.11,Completed,UPI
+QR10177,U395,2023-12-02,14:41:46,14,Saturday,Downtown/CBD,"University Campus",19.28,Completed,UPI
+QR10178,U447,2023-10-24,01:04:04,1,Tuesday,"Hospital District","Suburban Residential",0,Cancelled,UPI
+QR10179,U642,2023-11-03,21:14:50,21,Friday,"Tech Park","Central Station",35.78,Completed,"Credit Card"
+QR10180,U214,2023-10-22,11:46:53,11,Sunday,"Suburban Residential","University Campus",26.93,Completed,UPI
+QR10181,U769,2023-10-21,22:24:11,22,Saturday,"Shopping Mall","Tech Park",19.19,Completed,Wallet
+QR10182,U520,2023-10-06,19:41:13,19,Friday,Airport,"Shopping Mall",34.29,Completed,"Credit Card"
+QR10183,U457,2023-12-08,12:31:09,12,Friday,"Suburban Residential","Central Station",13.12,Completed,UPI
+QR10184,U459,2023-12-26,18:03:01,18,Tuesday,Airport,"Shopping Mall",0,Cancelled,"Credit Card"
+QR10185,U828,2023-10-07,18:40:49,18,Saturday,"Hospital District","University Campus",0,Cancelled,"Credit Card"
+QR10186,U408,2023-11-29,23:10:52,23,Wednesday,"Shopping Mall","University Campus",19.96,Completed,UPI
+QR10187,U762,2023-10-05,11:10:51,11,Thursday,"Tech Park","University Campus",22.66,Completed,Cash
+QR10188,U191,2023-10-11,21:26:09,21,Wednesday,"Tech Park","Central Station",27.94,Completed,"Credit Card"
+QR10189,U889,2023-10-22,17:13:14,17,Sunday,"University Campus","Tech Park",11.3,Completed,UPI
+QR10190,U611,2023-12-26,21:57:14,21,Tuesday,"Hospital District","Central Station",31.82,Completed,"Debit Card"
+QR10191,U867,2023-10-12,01:55:54,1,Thursday,"Shopping Mall","Tech Park",17.3,Completed,UPI
+QR10192,U260,2023-12-24,12:13:58,12,Sunday,Airport,"Shopping Mall",19.6,Completed,Cash
+QR10193,U713,2023-11-26,19:29:06,19,Sunday,"University Campus",Downtown/CBD,18.6,Completed,UPI
+QR10194,U706,2023-11-01,16:39:45,16,Wednesday,Downtown/CBD,"Central Station",16.99,Completed,Wallet
+QR10195,U356,2023-10-23,19:48:47,19,Monday,"Shopping Mall",Airport,22.08,Completed,UPI
+QR10196,U643,2023-11-10,16:53:34,16,Friday,"Hospital District","Central Station",16.81,Completed,"Credit Card"
+QR10197,U154,2023-10-22,17:03:15,17,Sunday,"Central Station","Suburban Residential",0,Cancelled,UPI
+QR10198,U837,2023-11-12,08:41:04,8,Sunday,"Tech Park","University Campus",26.62,Completed,Cash
+QR10199,U647,2023-10-31,19:45:35,19,Tuesday,"Central Station","Suburban Residential",25.7,Completed,UPI
+QR10200,U904,2023-12-22,17:11:53,17,Friday,"Central Station","Shopping Mall",24.2,Completed,"Credit Card"
+QR10201,U880,2023-10-14,16:42:22,16,Saturday,"Suburban Residential","Shopping Mall",27.38,Completed,"Debit Card"
+QR10202,U994,2023-10-04,15:25:35,15,Wednesday,"Tech Park","Hospital District",0,Cancelled,UPI
+QR10203,U623,2023-12-22,17:26:56,17,Friday,"Hospital District",Downtown/CBD,19.32,Completed,"Credit Card"
+QR10204,U653,2023-12-21,14:31:53,14,Thursday,"Suburban Residential","Hospital District",25.57,Completed,"Debit Card"
+QR10205,U400,2023-10-02,10:11:47,10,Monday,"Hospital District","University Campus",0,Cancelled,"Credit Card"
+QR10206,U847,2023-10-29,16:30:24,16,Sunday,Downtown/CBD,"Central Station",8.92,Completed,UPI
+QR10207,U781,2023-11-04,21:59:21,21,Saturday,"Central Station","Tech Park",24.68,Completed,UPI
+QR10208,U376,2023-10-14,15:05:53,15,Saturday,Airport,Downtown/CBD,25.87,Completed,Wallet
+QR10209,U174,2023-12-24,14:54:29,14,Sunday,"Central Station","Hospital District",19.55,Completed,Wallet
+QR10210,U845,2023-10-20,06:35:15,6,Friday,Airport,"University Campus",15.08,Completed,UPI
+QR10211,U439,2023-10-24,16:10:35,16,Tuesday,Airport,"Suburban Residential",0,Cancelled,"Credit Card"
+QR10212,U294,2023-12-05,20:50:58,20,Tuesday,"Hospital District",Downtown/CBD,26.49,Completed,UPI
+QR10213,U308,2023-12-25,07:24:15,7,Monday,Airport,"Shopping Mall",0,Cancelled,UPI
+QR10214,U378,2023-11-29,11:21:03,11,Wednesday,"Central Station","Shopping Mall",22.94,Completed,Cash
+QR10215,U818,2023-10-08,02:29:31,2,Sunday,"Shopping Mall",Downtown/CBD,14.35,Completed,UPI
+QR10216,U509,2023-10-25,20:07:35,20,Wednesday,"Suburban Residential",Downtown/CBD,0,Cancelled,Cash
+QR10217,U458,2023-12-09,20:42:04,20,Saturday,"Central Station","Shopping Mall",17.34,Completed,"Credit Card"
+QR10218,U374,2023-11-16,06:44:03,6,Thursday,Downtown/CBD,Airport,15.76,Completed,"Debit Card"
+QR10219,U149,2023-10-22,18:05:22,18,Sunday,"Suburban Residential","Hospital District",25.22,Completed,UPI
+QR10220,U794,2023-11-05,15:52:30,15,Sunday,"Shopping Mall",Downtown/CBD,18.65,Completed,UPI
+QR10221,U719,2023-11-24,17:33:16,17,Friday,"Hospital District","University Campus",0,Cancelled,Wallet
+QR10222,U119,2023-11-09,12:47:36,12,Thursday,"Shopping Mall","Suburban Residential",17.45,Completed,"Debit Card"
+QR10223,U184,2023-11-13,21:14:28,21,Monday,"Suburban Residential","Hospital District",14.86,Completed,UPI
+QR10224,U989,2023-10-25,00:11:28,0,Wednesday,"Shopping Mall","University Campus",13.24,Completed,UPI
+QR10225,U400,2023-11-13,09:38:30,9,Monday,Airport,"Suburban Residential",0,Cancelled,"Debit Card"
+QR10226,U959,2023-11-02,18:35:10,18,Thursday,"University Campus","Tech Park",32,Completed,UPI
+QR10227,U178,2023-11-19,21:22:56,21,Sunday,"Tech Park","Hospital District",31.28,Completed,Wallet
+QR10228,U596,2023-12-19,12:31:17,12,Tuesday,"Suburban Residential","Hospital District",0,Cancelled,Wallet
+QR10229,U895,2023-12-18,00:34:21,0,Monday,"Central Station","Shopping Mall",0,Cancelled,UPI
+QR10230,U528,2023-11-27,16:42:50,16,Monday,"Tech Park","Hospital District",10.72,Completed,Wallet
+QR10231,U123,2023-12-13,18:15:55,18,Wednesday,"University Campus","Suburban Residential",0,Cancelled,"Debit Card"
+QR10232,U799,2023-10-22,13:31:45,13,Sunday,"University Campus",Downtown/CBD,14.81,Completed,Wallet
+QR10233,U726,2023-11-25,08:55:33,8,Saturday,"Central Station","Suburban Residential",20.06,Completed,UPI
+QR10234,U113,2023-11-26,14:52:42,14,Sunday,"University Campus","Tech Park",10.16,Completed,"Credit Card"
+QR10235,U106,2023-12-09,11:09:37,11,Saturday,Airport,"Hospital District",27.32,Completed,"Credit Card"
+QR10236,U416,2023-10-01,19:30:48,19,Sunday,Downtown/CBD,"Shopping Mall",13.97,Completed,UPI
+QR10237,U388,2023-11-22,06:32:00,6,Wednesday,"Central Station","Suburban Residential",20.21,Completed,UPI
+QR10238,U635,2023-10-23,11:29:46,11,Monday,"Suburban Residential",Downtown/CBD,26.77,Completed,"Credit Card"
+QR10239,U486,2023-10-27,18:23:56,18,Friday,Airport,"Shopping Mall",17.89,Completed,Cash
+QR10240,U322,2023-11-14,19:27:28,19,Tuesday,Airport,Downtown/CBD,15.58,Completed,UPI
+QR10241,U552,2023-12-28,02:30:21,2,Thursday,"University Campus",Airport,25.25,Completed,Wallet
+QR10242,U605,2023-12-22,16:38:59,16,Friday,Downtown/CBD,"Shopping Mall",14.24,Completed,UPI
+QR10243,U113,2023-11-29,14:03:14,14,Wednesday,"Shopping Mall","Suburban Residential",0,Cancelled,UPI
+QR10244,U543,2023-12-11,19:39:11,19,Monday,Downtown/CBD,Airport,34.33,Completed,"Credit Card"
+QR10245,U619,2023-12-16,08:11:58,8,Saturday,"Tech Park","Hospital District",27.49,Completed,UPI
+QR10246,U187,2023-10-23,08:58:45,8,Monday,"Hospital District","Central Station",15.76,Completed,"Credit Card"
+QR10247,U435,2023-11-26,18:25:27,18,Sunday,Downtown/CBD,Airport,35.09,Completed,"Credit Card"
+QR10248,U296,2023-12-19,08:20:28,8,Tuesday,"Hospital District",Downtown/CBD,22,Completed,UPI
+QR10249,U844,2023-10-10,01:40:13,1,Tuesday,Downtown/CBD,"Tech Park",23.56,Completed,"Debit Card"
+QR10250,U243,2023-11-03,18:15:22,18,Friday,"Tech Park","Central Station",36.32,Completed,UPI
+QR10251,U723,2023-11-10,20:26:29,20,Friday,"Shopping Mall","University Campus",22.87,Completed,Cash
+QR10252,U192,2023-10-01,19:16:08,19,Sunday,"Suburban Residential","Tech Park",15.12,Completed,"Debit Card"
+QR10253,U277,2023-11-26,20:30:12,20,Sunday,Airport,"Hospital District",0,Cancelled,UPI
+QR10254,U245,2023-12-29,14:28:17,14,Friday,"Tech Park","Hospital District",0,Cancelled,Wallet
+QR10255,U938,2023-11-18,18:20:40,18,Saturday,"Hospital District","Tech Park",33.81,Completed,"Debit Card"
+QR10256,U954,2023-10-23,07:01:27,7,Monday,"Hospital District","Central Station",0,Cancelled,UPI
+QR10257,U536,2023-12-03,23:35:28,23,Sunday,"Central Station","Tech Park",12.95,Completed,Wallet
+QR10258,U436,2023-12-26,06:00:37,6,Tuesday,"Hospital District","Tech Park",10.7,Completed,"Debit Card"
+QR10259,U862,2023-11-15,20:24:33,20,Wednesday,Downtown/CBD,"Tech Park",20.35,Completed,Cash
+QR10260,U661,2023-11-13,02:36:15,2,Monday,"Suburban Residential","Shopping Mall",13.12,Completed,"Credit Card"
+QR10261,U575,2023-11-11,17:45:21,17,Saturday,"Tech Park",Downtown/CBD,37,Completed,"Credit Card"
+QR10262,U840,2023-10-06,12:07:35,12,Friday,"Suburban Residential","Central Station",23.51,Completed,Cash
+QR10263,U221,2023-10-08,15:01:02,15,Sunday,"Tech Park","Central Station",11.21,Completed,"Credit Card"
+QR10264,U474,2023-10-09,23:48:35,23,Monday,Downtown/CBD,"University Campus",12.44,Completed,"Credit Card"
+QR10265,U596,2023-11-19,19:33:19,19,Sunday,Downtown/CBD,"Tech Park",0,Cancelled,"Debit Card"
+QR10266,U100,2023-12-28,16:04:49,16,Thursday,"Hospital District","University Campus",0,Cancelled,UPI
+QR10267,U921,2023-12-09,17:26:49,17,Saturday,"Suburban Residential","Shopping Mall",22.34,Completed,UPI
+QR10268,U526,2023-10-02,23:42:50,23,Monday,"Suburban Residential","Tech Park",25.66,Completed,"Credit Card"
+QR10269,U217,2023-10-16,10:39:13,10,Monday,"Hospital District","Central Station",25.52,Completed,Cash
+QR10270,U400,2023-12-14,08:17:00,8,Thursday,Airport,"Central Station",21.58,Completed,UPI
+QR10271,U674,2023-10-20,18:49:00,18,Friday,"Tech Park","Suburban Residential",35.32,Completed,UPI
+QR10272,U900,2023-10-30,18:27:24,18,Monday,"Tech Park",Downtown/CBD,20.82,Completed,Cash
+QR10273,U493,2023-11-28,17:31:13,17,Tuesday,"Shopping Mall","Central Station",13.46,Completed,UPI
+QR10274,U465,2023-12-10,20:35:50,20,Sunday,Downtown/CBD,"Central Station",0,Cancelled,UPI
+QR10275,U524,2023-12-21,19:41:34,19,Thursday,"Tech Park","Hospital District",17.73,Completed,"Debit Card"
+QR10276,U606,2023-10-09,12:09:50,12,Monday,"Hospital District","Tech Park",27.17,Completed,UPI
+QR10277,U702,2023-11-04,22:51:05,22,Saturday,Airport,"University Campus",18.47,Completed,UPI
+QR10278,U723,2023-10-01,10:13:16,10,Sunday,"Tech Park",Airport,11.77,Completed,Wallet
+QR10279,U836,2023-12-28,01:29:24,1,Thursday,Airport,Downtown/CBD,0,Cancelled,Cash
+QR10280,U294,2023-11-23,22:22:19,22,Thursday,Airport,"University Campus",16.34,Completed,"Credit Card"
+QR10281,U788,2023-10-25,09:25:10,9,Wednesday,"Central Station","Suburban Residential",18.86,Completed,UPI
+QR10282,U552,2023-10-06,20:04:01,20,Friday,"Central Station","Suburban Residential",24.13,Completed,UPI
+QR10283,U539,2023-10-25,20:01:35,20,Wednesday,"Shopping Mall","Tech Park",0,Cancelled,UPI
+QR10284,U168,2023-11-30,19:38:05,19,Thursday,"University Campus","Hospital District",35.51,Completed,Wallet
+QR10285,U644,2023-11-11,16:22:26,16,Saturday,"University Campus","Suburban Residential",18.26,Completed,UPI
+QR10286,U100,2023-10-26,07:11:03,7,Thursday,"Hospital District",Downtown/CBD,13.45,Completed,Cash
+QR10287,U318,2023-10-29,21:58:44,21,Sunday,Downtown/CBD,"Suburban Residential",26.82,Completed,UPI
+QR10288,U822,2023-12-22,16:58:58,16,Friday,Downtown/CBD,"University Campus",19.18,Completed,"Debit Card"
+QR10289,U844,2023-10-20,18:17:02,18,Friday,"Shopping Mall",Downtown/CBD,26.65,Completed,"Debit Card"
+QR10290,U523,2023-12-15,15:32:10,15,Friday,"Suburban Residential","Central Station",25.54,Completed,Wallet
+QR10291,U208,2023-12-24,01:22:03,1,Sunday,"University Campus","Suburban Residential",0,Cancelled,UPI
+QR10292,U789,2023-10-21,07:23:08,7,Saturday,Downtown/CBD,"Central Station",27.26,Completed,Cash
+QR10293,U582,2023-10-12,07:42:48,7,Thursday,Downtown/CBD,"Shopping Mall",15.35,Completed,"Credit Card"
+QR10294,U896,2023-11-10,21:40:49,21,Friday,Downtown/CBD,"University Campus",19.23,Completed,"Credit Card"
+QR10295,U747,2023-10-19,19:03:54,19,Thursday,Downtown/CBD,Airport,13.72,Completed,UPI
+QR10296,U205,2023-11-19,18:29:53,18,Sunday,"Suburban Residential","University Campus",22.84,Completed,Cash
+QR10297,U871,2023-11-18,21:07:24,21,Saturday,"Shopping Mall","Tech Park",28.96,Completed,UPI
+QR10298,U946,2023-12-21,14:50:21,14,Thursday,"University Campus",Airport,21.88,Completed,"Credit Card"
+QR10299,U118,2023-12-06,10:09:17,10,Wednesday,Airport,"Hospital District",0,Cancelled,"Credit Card"
+QR10300,U631,2023-11-03,19:17:39,19,Friday,"Central Station","University Campus",15.1,Completed,UPI
+QR10301,U596,2023-11-30,21:42:33,21,Thursday,Downtown/CBD,"Central Station",21.7,Completed,Cash
+QR10302,U770,2023-12-10,01:04:12,1,Sunday,Downtown/CBD,"Suburban Residential",0,Cancelled,Cash
+QR10303,U319,2023-11-11,01:49:24,1,Saturday,"Suburban Residential","Central Station",0,Cancelled,Cash
+QR10304,U460,2023-10-08,17:55:48,17,Sunday,Airport,"Shopping Mall",0,Cancelled,UPI
+QR10305,U376,2023-11-06,09:58:31,9,Monday,"University Campus",Airport,9.65,Completed,UPI
+QR10306,U174,2023-12-02,00:56:50,0,Saturday,"Suburban Residential","Shopping Mall",22.24,Completed,UPI
+QR10307,U295,2023-12-08,06:22:19,6,Friday,"Shopping Mall","Hospital District",21.41,Completed,UPI
+QR10308,U509,2023-10-28,18:38:20,18,Saturday,"Shopping Mall","Suburban Residential",0,Cancelled,UPI
+QR10309,U845,2023-12-01,21:40:17,21,Friday,"Tech Park","Hospital District",31.54,Completed,Wallet
+QR10310,U923,2023-11-10,20:14:34,20,Friday,"University Campus","Hospital District",24,Completed,"Credit Card"
+QR10311,U541,2023-12-20,11:09:25,11,Wednesday,Downtown/CBD,"Shopping Mall",8.12,Completed,"Debit Card"
+QR10312,U709,2023-12-19,22:39:02,22,Tuesday,"University Campus","Shopping Mall",0,Cancelled,Wallet
+QR10313,U393,2023-11-13,18:40:46,18,Monday,"University Campus","Suburban Residential",0,Cancelled,UPI
+QR10314,U830,2023-11-26,21:26:06,21,Sunday,"Central Station","Shopping Mall",22.19,Completed,"Debit Card"
+QR10315,U619,2023-10-25,09:23:27,9,Wednesday,"Central Station","University Campus",27.19,Completed,"Debit Card"
+QR10316,U671,2023-10-10,15:23:15,15,Tuesday,"Tech Park",Airport,16.64,Completed,"Credit Card"
+QR10317,U356,2023-11-28,16:39:35,16,Tuesday,Airport,"Suburban Residential",25.31,Completed,UPI
+QR10318,U490,2023-12-25,13:08:21,13,Monday,"Shopping Mall","University Campus",9.01,Completed,Wallet
+QR10319,U210,2023-12-13,15:45:43,15,Wednesday,"Shopping Mall","Suburban Residential",25.67,Completed,"Debit Card"
+QR10320,U791,2023-11-10,07:13:13,7,Friday,"Tech Park","Suburban Residential",26.21,Completed,"Credit Card"
+QR10321,U420,2023-11-03,18:31:32,18,Friday,"Central Station","Hospital District",13.02,Completed,"Debit Card"
+QR10322,U524,2023-10-13,11:31:43,11,Friday,"Tech Park",Downtown/CBD,24.91,Completed,UPI
+QR10323,U373,2023-12-11,15:43:40,15,Monday,"Hospital District","University Campus",17.08,Completed,Cash
+QR10324,U372,2023-10-24,13:39:19,13,Tuesday,Downtown/CBD,"Central Station",16.72,Completed,UPI
+QR10325,U104,2023-10-14,11:31:32,11,Saturday,"Central Station","University Campus",9.35,Completed,UPI
+QR10326,U273,2023-10-10,18:50:17,18,Tuesday,Airport,"Central Station",25.35,Completed,UPI
+QR10327,U360,2023-10-08,01:06:35,1,Sunday,"Central Station","Tech Park",16.03,Completed,"Credit Card"
+QR10328,U901,2023-10-06,10:49:02,10,Friday,"Tech Park",Downtown/CBD,8.92,Completed,"Credit Card"
+QR10329,U506,2023-10-25,19:34:39,19,Wednesday,"Hospital District",Airport,17.86,Completed,"Credit Card"
+QR10330,U430,2023-10-05,00:31:29,0,Thursday,"Suburban Residential",Airport,11.69,Completed,Wallet
+QR10331,U492,2023-12-18,19:27:08,19,Monday,"Shopping Mall",Airport,0,Cancelled,UPI
+QR10332,U556,2023-11-16,14:52:43,14,Thursday,"University Campus",Airport,16.25,Completed,UPI
+QR10333,U658,2023-12-04,22:11:44,22,Monday,"Tech Park","Suburban Residential",9.37,Completed,Cash
+QR10334,U377,2023-12-14,18:17:27,18,Thursday,"Central Station","Tech Park",0,Cancelled,UPI
+QR10335,U669,2023-12-05,20:28:39,20,Tuesday,"Central Station","Shopping Mall",0,Cancelled,"Debit Card"
+QR10336,U243,2023-11-07,21:38:30,21,Tuesday,"Tech Park",Airport,0,Cancelled,"Debit Card"
+QR10337,U967,2023-12-04,20:32:03,20,Monday,"Central Station","University Campus",0,Cancelled,"Credit Card"
+QR10338,U138,2023-12-13,09:29:56,9,Wednesday,"Shopping Mall","Tech Park",14.86,Completed,"Debit Card"
+QR10339,U524,2023-10-17,10:13:04,10,Tuesday,"Suburban Residential","Shopping Mall",13.82,Completed,"Credit Card"
+QR10340,U612,2023-12-16,19:39:18,19,Saturday,"Shopping Mall","University Campus",24.52,Completed,"Credit Card"
+QR10341,U670,2023-10-29,18:12:27,18,Sunday,"University Campus",Downtown/CBD,21.84,Completed,Cash
+QR10342,U575,2023-10-20,09:55:31,9,Friday,Downtown/CBD,"Shopping Mall",9.62,Completed,Wallet
+QR10343,U617,2023-12-12,22:47:20,22,Tuesday,"Shopping Mall","Central Station",0,Cancelled,"Credit Card"
+QR10344,U140,2023-10-22,21:02:34,21,Sunday,"University Campus","Hospital District",24.41,Completed,UPI
+QR10345,U652,2023-10-25,20:34:14,20,Wednesday,"Tech Park","University Campus",29.82,Completed,Wallet
+QR10346,U110,2023-10-07,16:16:20,16,Saturday,"University Campus","Central Station",0,Cancelled,UPI
+QR10347,U356,2023-11-05,06:44:26,6,Sunday,"Hospital District","Shopping Mall",11.15,Completed,"Credit Card"
+QR10348,U911,2023-12-03,01:14:46,1,Sunday,"Shopping Mall","Hospital District",0,Cancelled,Wallet
+QR10349,U399,2023-10-10,21:42:24,21,Tuesday,"Suburban Residential","Central Station",28.13,Completed,Wallet
+QR10350,U726,2023-11-03,14:39:27,14,Friday,"Hospital District","University Campus",8.32,Completed,Wallet
+QR10351,U334,2023-12-23,21:44:03,21,Saturday,"Tech Park","Suburban Residential",37.03,Completed,UPI
+QR10352,U717,2023-11-23,19:35:44,19,Thursday,"Shopping Mall","Tech Park",30.87,Completed,"Credit Card"
+QR10353,U893,2023-10-27,22:20:58,22,Friday,"Hospital District","Central Station",0,Cancelled,Wallet
+QR10354,U484,2023-10-19,19:35:36,19,Thursday,Airport,"Central Station",25.19,Completed,Cash
+QR10355,U839,2023-10-06,09:52:45,9,Friday,"Shopping Mall","Suburban Residential",16.39,Completed,UPI
+QR10356,U581,2023-12-25,17:40:39,17,Monday,Downtown/CBD,"Hospital District",0,Cancelled,UPI
+QR10357,U715,2023-11-05,07:32:30,7,Sunday,"Tech Park",Downtown/CBD,15.89,Completed,"Debit Card"
+QR10358,U634,2023-10-14,21:34:22,21,Saturday,"Suburban Residential",Downtown/CBD,27.09,Completed,"Credit Card"
+QR10359,U429,2023-12-07,19:29:16,19,Thursday,"Suburban Residential","Shopping Mall",19.59,Completed,UPI
+QR10360,U600,2023-10-05,10:09:28,10,Thursday,Downtown/CBD,"Tech Park",24.31,Completed,Wallet
+QR10361,U389,2023-11-05,06:18:22,6,Sunday,Downtown/CBD,"Hospital District",9.35,Completed,Cash
+QR10362,U371,2023-10-29,16:56:58,16,Sunday,"Central Station","University Campus",24.32,Completed,"Credit Card"
+QR10363,U290,2023-11-21,17:58:43,17,Tuesday,"University Campus","Tech Park",0,Cancelled,UPI
+QR10364,U959,2023-10-29,09:11:15,9,Sunday,"Central Station","Tech Park",0,Cancelled,Cash
+QR10365,U335,2023-11-12,06:37:15,6,Sunday,"Hospital District","Suburban Residential",19.99,Completed,"Credit Card"
+QR10366,U289,2023-11-05,00:28:18,0,Sunday,"Suburban Residential","Shopping Mall",9.4,Completed,"Debit Card"
+QR10367,U625,2023-12-27,14:44:16,14,Wednesday,"Hospital District","Central Station",0,Cancelled,UPI
+QR10368,U252,2023-10-31,00:22:12,0,Tuesday,Downtown/CBD,"Hospital District",22.61,Completed,UPI
+QR10369,U106,2023-10-29,14:44:31,14,Sunday,Downtown/CBD,"Hospital District",23.68,Completed,UPI
+QR10370,U167,2023-11-13,21:40:21,21,Monday,"Central Station",Airport,12.68,Completed,"Credit Card"
+QR10371,U400,2023-12-02,13:58:59,13,Saturday,"Shopping Mall","University Campus",16.43,Completed,UPI
+QR10372,U434,2023-12-07,21:37:20,21,Thursday,"Suburban Residential","Central Station",17.32,Completed,UPI
+QR10373,U855,2023-12-25,17:58:50,17,Monday,"University Campus","Suburban Residential",17.87,Completed,UPI
+QR10374,U767,2023-12-08,16:01:29,16,Friday,"University Campus","Shopping Mall",27.35,Completed,"Credit Card"
+QR10375,U769,2023-12-21,16:30:42,16,Thursday,"University Campus","Shopping Mall",0,Cancelled,UPI
+QR10376,U787,2023-10-14,17:44:35,17,Saturday,"Shopping Mall","Suburban Residential",27.36,Completed,UPI
+QR10377,U619,2023-11-12,08:27:13,8,Sunday,Downtown/CBD,Airport,13.88,Completed,UPI
+QR10378,U490,2023-10-14,21:41:24,21,Saturday,"Central Station","Hospital District",19.1,Completed,UPI
+QR10379,U288,2023-12-27,02:53:44,2,Wednesday,Airport,"Shopping Mall",0,Cancelled,"Debit Card"
+QR10380,U752,2023-10-02,01:49:01,1,Monday,Airport,"Central Station",0,Cancelled,"Credit Card"
+QR10381,U494,2023-12-23,12:08:35,12,Saturday,"University Campus",Airport,0,Cancelled,UPI
+QR10382,U623,2023-10-31,23:55:27,23,Tuesday,"University Campus",Downtown/CBD,0,Cancelled,UPI
+QR10383,U377,2023-10-29,23:00:48,23,Sunday,"University Campus","Hospital District",23.96,Completed,Cash
+QR10384,U188,2023-11-25,13:32:05,13,Saturday,"Suburban Residential",Airport,16.93,Completed,"Credit Card"
+QR10385,U218,2023-11-28,07:26:16,7,Tuesday,"University Campus","Tech Park",19.93,Completed,Cash
+QR10386,U445,2023-12-08,12:16:10,12,Friday,"Shopping Mall",Airport,9.82,Completed,UPI
+QR10387,U755,2023-10-06,18:00:13,18,Friday,"Hospital District",Downtown/CBD,37,Completed,Wallet
+QR10388,U485,2023-11-25,06:22:07,6,Saturday,"Central Station",Downtown/CBD,26.86,Completed,"Debit Card"
+QR10389,U190,2023-12-27,22:06:05,22,Wednesday,Airport,"Suburban Residential",15.07,Completed,UPI
+QR10390,U828,2023-10-21,11:48:37,11,Saturday,"Hospital District",Airport,18.07,Completed,UPI
+QR10391,U870,2023-12-09,02:49:48,2,Saturday,Downtown/CBD,"Suburban Residential",0,Cancelled,"Credit Card"
+QR10392,U189,2023-11-04,23:56:24,23,Saturday,"University Campus","Hospital District",0,Cancelled,"Credit Card"
+QR10393,U189,2023-12-25,11:20:53,11,Monday,"Suburban Residential",Airport,16,Completed,UPI
+QR10394,U229,2023-11-26,17:55:24,17,Sunday,"University Campus","Suburban Residential",27.51,Completed,Wallet
+QR10395,U899,2023-10-14,18:39:22,18,Saturday,"University Campus","Shopping Mall",12.99,Completed,Wallet
+QR10396,U931,2023-10-12,16:46:33,16,Thursday,Downtown/CBD,"Tech Park",15.28,Completed,"Credit Card"
+QR10397,U695,2023-11-17,18:53:56,18,Friday,"Hospital District","Central Station",23.69,Completed,Cash
+QR10398,U977,2023-11-13,22:04:13,22,Monday,Downtown/CBD,Airport,13.51,Completed,UPI
+QR10399,U598,2023-11-11,21:54:44,21,Saturday,Downtown/CBD,"Suburban Residential",12.68,Completed,Cash
+QR10400,U560,2023-12-28,19:48:40,19,Thursday,Airport,"Tech Park",18.91,Completed,UPI
+QR10401,U696,2023-10-29,17:26:17,17,Sunday,"Hospital District","Tech Park",20.63,Completed,"Credit Card"
+QR10402,U245,2023-11-03,17:58:13,17,Friday,Airport,"University Campus",13.78,Completed,UPI
+QR10403,U523,2023-11-30,19:32:14,19,Thursday,Downtown/CBD,Airport,21.58,Completed,UPI
+QR10404,U418,2023-10-23,14:35:33,14,Monday,Downtown/CBD,"Hospital District",0,Cancelled,"Credit Card"
+QR10405,U675,2023-10-13,07:14:36,7,Friday,Downtown/CBD,Airport,14.83,Completed,Cash
+QR10406,U784,2023-10-02,19:02:04,19,Monday,Downtown/CBD,Airport,29.9,Completed,Cash
+QR10407,U955,2023-12-11,18:34:36,18,Monday,"Tech Park","Shopping Mall",10.38,Completed,Wallet
+QR10408,U330,2023-10-18,13:31:32,13,Wednesday,Airport,"Suburban Residential",0,Cancelled,UPI
+QR10409,U836,2023-11-05,23:18:05,23,Sunday,"Tech Park","University Campus",0,Cancelled,UPI
+QR10410,U934,2023-11-03,19:32:31,19,Friday,"University Campus","Central Station",19.69,Completed,UPI
+QR10411,U338,2023-10-21,17:00:04,17,Saturday,"Hospital District","Suburban Residential",11.99,Completed,UPI
+QR10412,U625,2023-10-23,14:57:41,14,Monday,"Central Station","Suburban Residential",19.67,Completed,UPI
+QR10413,U151,2023-12-09,15:29:40,15,Saturday,"Tech Park","University Campus",0,Cancelled,Wallet
+QR10414,U230,2023-12-14,21:10:59,21,Thursday,"Tech Park",Airport,31.06,Completed,Cash
+QR10415,U747,2023-11-08,09:53:57,9,Wednesday,"Tech Park","Central Station",0,Cancelled,UPI
+QR10416,U807,2023-12-12,21:02:02,21,Tuesday,"Central Station","Shopping Mall",14.36,Completed,"Credit Card"
+QR10417,U757,2023-11-28,07:04:20,7,Tuesday,"Central Station","Tech Park",9.65,Completed,UPI
+QR10418,U477,2023-10-11,22:01:01,22,Wednesday,"Shopping Mall",Airport,11.99,Completed,UPI
+QR10419,U604,2023-12-02,08:21:45,8,Saturday,"Suburban Residential","Shopping Mall",9.7,Completed,UPI
+QR10420,U305,2023-10-23,15:51:45,15,Monday,"Shopping Mall","Central Station",22,Completed,UPI
+QR10421,U401,2023-12-14,11:27:44,11,Thursday,Airport,"Hospital District",9.92,Completed,UPI
+QR10422,U202,2023-12-13,19:23:01,19,Wednesday,"Hospital District","Suburban Residential",21.75,Completed,UPI
+QR10423,U650,2023-10-09,23:39:41,23,Monday,"Central Station","Shopping Mall",26.86,Completed,"Credit Card"
+QR10424,U421,2023-11-03,08:39:36,8,Friday,"Hospital District","Central Station",0,Cancelled,UPI
+QR10425,U348,2023-11-20,00:36:11,0,Monday,Downtown/CBD,"Tech Park",12.83,Completed,UPI
+QR10426,U987,2023-11-08,00:29:24,0,Wednesday,"Central Station","Suburban Residential",23.35,Completed,Wallet
+QR10427,U360,2023-10-22,19:17:15,19,Sunday,"Suburban Residential","Central Station",0,Cancelled,"Debit Card"
+QR10428,U722,2023-11-21,19:34:29,19,Tuesday,"University Campus",Downtown/CBD,13.17,Completed,"Debit Card"
+QR10429,U796,2023-11-06,10:39:14,10,Monday,"Tech Park","Shopping Mall",23.24,Completed,UPI
+QR10430,U814,2023-12-28,16:43:24,16,Thursday,"Shopping Mall",Airport,0,Cancelled,UPI
+QR10431,U429,2023-10-03,12:10:31,12,Tuesday,"Suburban Residential","University Campus",16.76,Completed,Wallet
+QR10432,U322,2023-11-24,13:42:34,13,Friday,Downtown/CBD,"Shopping Mall",25.76,Completed,"Credit Card"
+QR10433,U399,2023-12-09,22:43:55,22,Saturday,"Tech Park",Airport,20.23,Completed,UPI
+QR10434,U426,2023-10-02,09:41:23,9,Monday,"University Campus","Tech Park",20.68,Completed,"Credit Card"
+QR10435,U765,2023-11-23,06:15:30,6,Thursday,"University Campus","Shopping Mall",0,Cancelled,UPI
+QR10436,U753,2023-10-07,01:58:01,1,Saturday,"Hospital District",Airport,9.29,Completed,UPI
+QR10437,U555,2023-10-10,06:44:11,6,Tuesday,"Hospital District","Central Station",11.86,Completed,UPI
+QR10438,U170,2023-10-23,10:05:37,10,Monday,"Tech Park","University Campus",20.18,Completed,"Credit Card"
+QR10439,U970,2023-11-13,21:10:51,21,Monday,"Tech Park",Airport,23.03,Completed,UPI
+QR10440,U947,2023-12-14,02:35:17,2,Thursday,"Tech Park","Central Station",0,Cancelled,Cash
+QR10441,U627,2023-12-10,17:05:38,17,Sunday,"Shopping Mall","Tech Park",15.3,Completed,UPI
+QR10442,U197,2023-11-18,15:40:28,15,Saturday,"Hospital District","Central Station",26.29,Completed,Wallet
+QR10443,U845,2023-11-23,22:01:14,22,Thursday,"Shopping Mall","Suburban Residential",8.72,Completed,UPI
+QR10444,U623,2023-12-22,13:49:50,13,Friday,"Central Station","Hospital District",0,Cancelled,"Credit Card"
+QR10445,U114,2023-10-09,15:28:29,15,Monday,"University Campus","Central Station",11,Completed,UPI
+QR10446,U814,2023-11-30,11:49:45,11,Thursday,"Shopping Mall",Downtown/CBD,0,Cancelled,UPI
+QR10447,U841,2023-11-30,12:55:04,12,Thursday,"Suburban Residential","Central Station",21.11,Completed,"Credit Card"
+QR10448,U589,2023-10-23,12:15:52,12,Monday,"Central Station","University Campus",13.25,Completed,"Credit Card"
+QR10449,U459,2023-11-29,17:13:26,17,Wednesday,"Suburban Residential","Shopping Mall",36.57,Completed,Cash
+QR10450,U764,2023-12-18,23:50:16,23,Monday,"University Campus",Downtown/CBD,17.66,Completed,"Debit Card"
+QR10451,U431,2023-11-22,18:02:06,18,Wednesday,Airport,"Shopping Mall",0,Cancelled,Wallet
+QR10452,U229,2023-10-11,17:50:54,17,Wednesday,"University Campus",Airport,16.56,Completed,UPI
+QR10453,U491,2023-10-18,17:05:09,17,Wednesday,"Tech Park",Airport,17.06,Completed,UPI
+QR10454,U522,2023-12-15,12:28:22,12,Friday,Airport,"Suburban Residential",0,Cancelled,UPI
+QR10455,U888,2023-11-29,06:17:43,6,Wednesday,"University Campus",Downtown/CBD,21.19,Completed,UPI
+QR10456,U236,2023-12-03,08:37:09,8,Sunday,"Suburban Residential","Tech Park",11.14,Completed,UPI
+QR10457,U426,2023-10-19,17:20:45,17,Thursday,"Suburban Residential",Downtown/CBD,0,Cancelled,"Debit Card"
+QR10458,U759,2023-11-27,17:51:06,17,Monday,"Suburban Residential",Airport,0,Cancelled,UPI
+QR10459,U338,2023-10-16,10:41:38,10,Monday,"Hospital District",Airport,21.64,Completed,UPI
+QR10460,U717,2023-12-21,21:28:17,21,Thursday,Airport,"University Campus",0,Cancelled,"Debit Card"
+QR10461,U834,2023-10-07,15:19:22,15,Saturday,"Tech Park","Hospital District",0,Cancelled,Cash
+QR10462,U744,2023-11-01,18:51:50,18,Wednesday,Airport,"Hospital District",24.44,Completed,UPI
+QR10463,U879,2023-12-12,20:49:23,20,Tuesday,"University Campus",Airport,33.95,Completed,Wallet
+QR10464,U539,2023-11-20,21:32:55,21,Monday,Airport,"University Campus",0,Cancelled,UPI
+QR10465,U599,2023-12-02,12:02:36,12,Saturday,Downtown/CBD,"Tech Park",9.19,Completed,UPI
+QR10466,U297,2023-10-19,09:14:31,9,Thursday,Downtown/CBD,"Suburban Residential",19.48,Completed,Wallet
+QR10467,U335,2023-12-07,07:03:12,7,Thursday,"Suburban Residential","University Campus",14.77,Completed,"Credit Card"
+QR10468,U663,2023-10-01,12:15:58,12,Sunday,Airport,"University Campus",0,Cancelled,"Debit Card"
+QR10469,U813,2023-12-11,06:32:28,6,Monday,"Central Station",Airport,0,Cancelled,"Credit Card"
+QR10470,U679,2023-11-06,01:27:19,1,Monday,"University Campus","Hospital District",20.57,Completed,"Credit Card"
+QR10471,U500,2023-10-09,08:23:43,8,Monday,"University Campus","Central Station",0,Cancelled,UPI
+QR10472,U641,2023-12-13,02:52:31,2,Wednesday,Airport,"Suburban Residential",15.98,Completed,UPI
+QR10473,U429,2023-11-24,18:25:10,18,Friday,"Shopping Mall","Hospital District",0,Cancelled,Cash
+QR10474,U172,2023-11-23,10:52:41,10,Thursday,"University Campus","Suburban Residential",8.66,Completed,"Debit Card"
+QR10475,U770,2023-11-10,23:29:27,23,Friday,Downtown/CBD,"Hospital District",0,Cancelled,UPI
+QR10476,U876,2023-11-08,15:21:48,15,Wednesday,"Shopping Mall",Downtown/CBD,26.41,Completed,UPI
+QR10477,U456,2023-12-23,19:18:36,19,Saturday,"Hospital District",Downtown/CBD,26.97,Completed,UPI
+QR10478,U428,2023-10-22,07:08:14,7,Sunday,"Suburban Residential","Tech Park",21.31,Completed,UPI
+QR10479,U291,2023-12-11,10:15:39,10,Monday,"University Campus","Shopping Mall",0,Cancelled,UPI
+QR10480,U575,2023-11-11,16:20:08,16,Saturday,Airport,"Tech Park",0,Cancelled,UPI
+QR10481,U628,2023-11-27,17:09:49,17,Monday,"Tech Park","University Campus",15.8,Completed,Cash
+QR10482,U558,2023-11-25,20:15:36,20,Saturday,"Shopping Mall","University Campus",0,Cancelled,"Debit Card"
+QR10483,U141,2023-11-17,18:53:55,18,Friday,"Central Station","University Campus",16.05,Completed,Wallet
+QR10484,U515,2023-11-27,19:42:36,19,Monday,"Shopping Mall","University Campus",32.07,Completed,Wallet
+QR10485,U253,2023-10-15,20:18:41,20,Sunday,"Shopping Mall","Tech Park",0,Cancelled,Cash
+QR10486,U171,2023-11-24,13:06:06,13,Friday,"Shopping Mall","Central Station",22.58,Completed,UPI
+QR10487,U467,2023-12-22,17:14:51,17,Friday,"Central Station","Shopping Mall",25.59,Completed,UPI
+QR10488,U733,2023-12-07,19:41:21,19,Thursday,"Tech Park",Downtown/CBD,29.11,Completed,UPI
+QR10489,U842,2023-11-03,21:03:51,21,Friday,"Central Station","Shopping Mall",0,Cancelled,UPI
+QR10490,U147,2023-10-12,15:44:12,15,Thursday,"University Campus","Hospital District",0,Cancelled,UPI
+QR10491,U167,2023-10-15,21:20:43,21,Sunday,Airport,Downtown/CBD,0,Cancelled,UPI
+QR10492,U915,2023-11-11,22:20:13,22,Saturday,"Central Station","Hospital District",16.94,Completed,UPI
+QR10493,U540,2023-12-06,00:38:02,0,Wednesday,"Suburban Residential","Shopping Mall",0,Cancelled,UPI
+QR10494,U148,2023-12-10,18:58:21,18,Sunday,"Hospital District",Airport,12.78,Completed,UPI
+QR10495,U795,2023-12-01,10:12:03,10,Friday,"Hospital District","Suburban Residential",0,Cancelled,UPI
+QR10496,U780,2023-11-01,19:39:19,19,Wednesday,"Hospital District","Tech Park",32.15,Completed,UPI
+QR10497,U230,2023-10-11,02:08:12,2,Wednesday,"Tech Park","Suburban Residential",0,Cancelled,"Credit Card"
+QR10498,U744,2023-10-15,19:24:11,19,Sunday,"Tech Park","Hospital District",18.89,Completed,"Credit Card"
+QR10499,U829,2023-10-05,18:17:20,18,Thursday,"University Campus","Tech Park",20.15,Completed,"Credit Card"
+QR10500,U734,2023-12-17,10:24:31,10,Sunday,"University Campus","Suburban Residential",10.88,Completed,"Credit Card"
+QR10501,U966,2023-10-09,19:18:45,19,Monday,"Central Station","Tech Park",26.98,Completed,UPI
+QR10502,U914,2023-10-29,07:06:44,7,Sunday,"Suburban Residential","Central Station",12.16,Completed,UPI
+QR10503,U480,2023-11-09,19:28:57,19,Thursday,"Hospital District","Shopping Mall",29.96,Completed,UPI
+QR10504,U745,2023-12-20,12:48:52,12,Wednesday,"Tech Park",Airport,25.81,Completed,UPI
+QR10505,U577,2023-10-03,13:43:10,13,Tuesday,"Suburban Residential","Tech Park",17.15,Completed,"Credit Card"
+QR10506,U885,2023-11-09,00:14:27,0,Thursday,"Shopping Mall","Suburban Residential",0,Cancelled,UPI
+QR10507,U204,2023-12-02,02:42:13,2,Saturday,"Suburban Residential","Central Station",0,Cancelled,"Credit Card"
+QR10508,U546,2023-11-21,17:22:59,17,Tuesday,"Central Station",Downtown/CBD,13.31,Completed,UPI
+QR10509,U136,2023-11-12,22:38:55,22,Sunday,"Suburban Residential","Hospital District",0,Cancelled,Cash
+QR10510,U514,2023-11-02,21:22:20,21,Thursday,"Hospital District","Central Station",0,Cancelled,UPI
+QR10511,U380,2023-11-04,02:15:29,2,Saturday,"Central Station",Airport,14.57,Completed,UPI
+QR10512,U964,2023-12-29,06:49:17,6,Friday,Airport,"Tech Park",16.01,Completed,Wallet
+QR10513,U255,2023-10-01,18:36:57,18,Sunday,"Shopping Mall","University Campus",31.59,Completed,"Credit Card"
+QR10514,U397,2023-10-27,17:49:38,17,Friday,"Tech Park","Hospital District",0,Cancelled,UPI
+QR10515,U998,2023-10-26,09:56:41,9,Thursday,Airport,"Central Station",0,Cancelled,"Credit Card"
+QR10516,U406,2023-12-16,12:36:15,12,Saturday,Downtown/CBD,"Tech Park",12.02,Completed,UPI
+QR10517,U713,2023-12-09,21:57:09,21,Saturday,"Tech Park","Shopping Mall",19.01,Completed,UPI
+QR10518,U245,2023-10-12,18:39:03,18,Thursday,"Tech Park","Suburban Residential",0,Cancelled,UPI
+QR10519,U244,2023-12-23,17:09:13,17,Saturday,"Tech Park","Hospital District",37.11,Completed,Cash
+QR10520,U883,2023-10-23,13:53:13,13,Monday,"Suburban Residential","Shopping Mall",0,Cancelled,Cash
+QR10521,U991,2023-12-24,13:05:18,13,Sunday,"Suburban Residential","University Campus",0,Cancelled,UPI
+QR10522,U663,2023-10-11,17:26:06,17,Wednesday,"Tech Park","Central Station",33.31,Completed,Wallet
+QR10523,U940,2023-11-13,11:46:58,11,Monday,"University Campus",Airport,21.65,Completed,UPI
+QR10524,U938,2023-12-12,20:32:46,20,Tuesday,"Shopping Mall",Downtown/CBD,34.24,Completed,Wallet
+QR10525,U619,2023-12-23,08:46:23,8,Saturday,"Shopping Mall","Suburban Residential",15.22,Completed,"Credit Card"
+QR10526,U456,2023-11-19,00:03:59,0,Sunday,"Tech Park","University Campus",21.49,Completed,Cash
+QR10527,U323,2023-10-05,18:36:33,18,Thursday,"University Campus","Tech Park",33.24,Completed,Cash
+QR10528,U235,2023-12-20,00:30:01,0,Wednesday,"Central Station","Hospital District",0,Cancelled,UPI
+QR10529,U705,2023-11-13,20:41:52,20,Monday,"University Campus","Hospital District",30.3,Completed,Wallet
+QR10530,U649,2023-11-04,20:16:29,20,Saturday,"University Campus",Downtown/CBD,12.5,Completed,"Credit Card"
+QR10531,U223,2023-10-11,21:32:30,21,Wednesday,"Central Station","Suburban Residential",0,Cancelled,Wallet
+QR10532,U439,2023-11-01,19:40:47,19,Wednesday,"University Campus","Hospital District",18.75,Completed,"Credit Card"
+QR10533,U176,2023-10-01,16:54:36,16,Sunday,"Suburban Residential","Central Station",11.44,Completed,UPI
+QR10534,U212,2023-12-26,12:32:25,12,Tuesday,"Shopping Mall","Tech Park",24.16,Completed,UPI
+QR10535,U755,2023-11-01,17:20:38,17,Wednesday,Airport,"Shopping Mall",31.61,Completed,"Debit Card"
+QR10536,U203,2023-12-17,17:36:41,17,Sunday,"Shopping Mall","Hospital District",30.02,Completed,UPI
+QR10537,U676,2023-10-15,22:29:49,22,Sunday,"Tech Park","Shopping Mall",27.19,Completed,UPI
+QR10538,U533,2023-10-04,23:45:13,23,Wednesday,"University Campus",Airport,11.45,Completed,Cash
+QR10539,U715,2023-12-10,02:15:06,2,Sunday,"Hospital District",Airport,0,Cancelled,"Debit Card"
+QR10540,U441,2023-10-12,02:28:29,2,Thursday,"Suburban Residential","Shopping Mall",19.67,Completed,UPI
+QR10541,U863,2023-12-17,08:45:45,8,Sunday,"Hospital District","Tech Park",20.08,Completed,Cash
+QR10542,U461,2023-10-01,22:48:17,22,Sunday,"Central Station",Downtown/CBD,0,Cancelled,"Credit Card"
+QR10543,U960,2023-10-09,23:07:14,23,Monday,"University Campus","Suburban Residential",16.36,Completed,"Credit Card"
+QR10544,U805,2023-10-05,18:03:29,18,Thursday,"Hospital District","Suburban Residential",11.79,Completed,"Credit Card"
+QR10545,U343,2023-10-27,14:16:24,14,Friday,Airport,"Central Station",0,Cancelled,"Credit Card"
+QR10546,U136,2023-11-17,20:42:18,20,Friday,"Suburban Residential","University Campus",28.3,Completed,"Debit Card"
+QR10547,U712,2023-10-27,06:18:11,6,Friday,"Hospital District","Shopping Mall",8.6,Completed,"Debit Card"
+QR10548,U510,2023-11-05,18:51:37,18,Sunday,"University Campus","Tech Park",22.23,Completed,Cash
+QR10549,U319,2023-10-28,19:37:54,19,Saturday,Airport,"Shopping Mall",0,Cancelled,"Credit Card"
+QR10550,U923,2023-10-03,16:54:47,16,Tuesday,"Tech Park","Hospital District",18.98,Completed,"Credit Card"
+QR10551,U520,2023-11-24,22:49:46,22,Friday,"Hospital District","Central Station",0,Cancelled,"Credit Card"
+QR10552,U758,2023-12-23,18:05:27,18,Saturday,"Tech Park","Suburban Residential",23.83,Completed,UPI
+QR10553,U674,2023-10-08,13:36:27,13,Sunday,"Shopping Mall",Airport,10.01,Completed,UPI
+QR10554,U835,2023-10-21,21:11:03,21,Saturday,"Central Station",Airport,28.51,Completed,UPI
+QR10555,U771,2023-12-01,19:36:16,19,Friday,"Tech Park","Shopping Mall",12.15,Completed,Wallet
+QR10556,U311,2023-10-28,01:06:36,1,Saturday,"Tech Park","Shopping Mall",0,Cancelled,Cash
+QR10557,U968,2023-10-14,20:09:29,20,Saturday,Airport,Downtown/CBD,0,Cancelled,"Credit Card"
+QR10558,U935,2023-11-01,01:14:42,1,Wednesday,"Central Station","Hospital District",18.01,Completed,"Credit Card"
+QR10559,U923,2023-12-21,21:09:05,21,Thursday,"Shopping Mall","University Campus",24.49,Completed,Cash
+QR10560,U571,2023-10-18,20:16:24,20,Wednesday,"Tech Park","Shopping Mall",30.01,Completed,Wallet
+QR10561,U658,2023-10-21,13:38:50,13,Saturday,"Suburban Residential","Tech Park",23.2,Completed,"Credit Card"
+QR10562,U453,2023-10-05,16:42:25,16,Thursday,"University Campus","Suburban Residential",25.42,Completed,UPI
+QR10563,U974,2023-12-18,02:22:15,2,Monday,"University Campus","Tech Park",20.08,Completed,"Credit Card"
+QR10564,U500,2023-10-29,01:22:01,1,Sunday,"Tech Park",Downtown/CBD,0,Cancelled,UPI
+QR10565,U437,2023-10-26,11:25:40,11,Thursday,"Tech Park","Shopping Mall",21.32,Completed,"Debit Card"
+QR10566,U967,2023-12-01,19:12:15,19,Friday,"Suburban Residential","Central Station",13.86,Completed,UPI
+QR10567,U267,2023-11-13,13:49:54,13,Monday,Airport,"Suburban Residential",16.12,Completed,UPI
+QR10568,U115,2023-11-08,21:39:51,21,Wednesday,"Hospital District","Tech Park",0,Cancelled,"Credit Card"
+QR10569,U828,2023-10-06,01:52:57,1,Friday,"Suburban Residential",Airport,17.68,Completed,UPI
+QR10570,U702,2023-10-24,12:59:30,12,Tuesday,"Hospital District","Suburban Residential",0,Cancelled,Wallet
+QR10571,U870,2023-10-27,13:10:11,13,Friday,Downtown/CBD,"University Campus",0,Cancelled,"Credit Card"
+QR10572,U410,2023-12-27,21:56:48,21,Wednesday,Airport,"Tech Park",0,Cancelled,UPI
+QR10573,U148,2023-10-21,20:36:07,20,Saturday,Downtown/CBD,"University Campus",23.91,Completed,"Credit Card"
+QR10574,U271,2023-11-06,12:35:23,12,Monday,"Central Station","Suburban Residential",0,Cancelled,"Debit Card"
+QR10575,U380,2023-11-22,22:52:32,22,Wednesday,Airport,"Hospital District",0,Cancelled,UPI
+QR10576,U233,2023-11-02,00:01:46,0,Thursday,"Shopping Mall",Airport,21.7,Completed,"Credit Card"
+QR10577,U489,2023-12-06,17:08:54,17,Wednesday,"Shopping Mall",Airport,39.43,Completed,"Credit Card"
+QR10578,U112,2023-12-09,22:20:05,22,Saturday,Downtown/CBD,"Suburban Residential",0,Cancelled,Cash
+QR10579,U399,2023-11-13,01:20:14,1,Monday,"Central Station",Downtown/CBD,0,Cancelled,Wallet
+QR10580,U867,2023-10-27,10:10:00,10,Friday,"Suburban Residential",Downtown/CBD,11.44,Completed,"Credit Card"
+QR10581,U477,2023-10-14,08:36:02,8,Saturday,"Hospital District","Tech Park",0,Cancelled,"Debit Card"
+QR10582,U285,2023-10-29,18:08:12,18,Sunday,Airport,"Shopping Mall",21.38,Completed,"Credit Card"
+QR10583,U387,2023-10-27,18:11:18,18,Friday,"Suburban Residential",Downtown/CBD,23.96,Completed,"Credit Card"
+QR10584,U307,2023-10-10,23:47:47,23,Tuesday,"Hospital District","Tech Park",22,Completed,UPI
+QR10585,U903,2023-11-12,13:09:07,13,Sunday,"Tech Park","University Campus",0,Cancelled,UPI
+QR10586,U112,2023-11-24,20:27:38,20,Friday,Downtown/CBD,"Suburban Residential",19.37,Completed,UPI
+QR10587,U917,2023-10-22,15:30:34,15,Sunday,"University Campus",Downtown/CBD,20.98,Completed,Wallet
+QR10588,U418,2023-10-02,17:52:32,17,Monday,"Suburban Residential",Airport,31.38,Completed,UPI
+QR10589,U785,2023-10-23,13:32:38,13,Monday,"Hospital District","Tech Park",20.93,Completed,"Debit Card"
+QR10590,U971,2023-11-28,00:14:10,0,Tuesday,"Hospital District","Suburban Residential",23.42,Completed,UPI
+QR10591,U891,2023-12-01,08:38:54,8,Friday,"Hospital District","University Campus",15.62,Completed,UPI
+QR10592,U594,2023-11-26,23:38:01,23,Sunday,Airport,"Shopping Mall",17.33,Completed,UPI
+QR10593,U978,2023-11-20,12:13:40,12,Monday,"Tech Park",Downtown/CBD,24.13,Completed,"Credit Card"
+QR10594,U193,2023-12-01,20:05:52,20,Friday,"Suburban Residential",Downtown/CBD,16.59,Completed,"Credit Card"
+QR10595,U671,2023-10-21,11:34:18,11,Saturday,Downtown/CBD,"Tech Park",0,Cancelled,"Credit Card"
+QR10596,U697,2023-12-03,08:26:23,8,Sunday,Downtown/CBD,"Suburban Residential",19.21,Completed,"Credit Card"
+QR10597,U118,2023-12-29,21:31:23,21,Friday,"University Campus",Downtown/CBD,0,Cancelled,UPI
+QR10598,U349,2023-10-23,00:00:17,0,Monday,Downtown/CBD,"Hospital District",0,Cancelled,"Credit Card"
+QR10599,U899,2023-10-22,19:44:21,19,Sunday,"Central Station","Shopping Mall",0,Cancelled,Cash
+QR10600,U296,2023-12-10,10:34:11,10,Sunday,Downtown/CBD,"Hospital District",11.35,Completed,"Debit Card"
+QR10601,U839,2023-11-09,22:34:47,22,Thursday,Downtown/CBD,"Central Station",0,Cancelled,UPI
+QR10602,U836,2023-10-20,15:39:47,15,Friday,"University Campus","Tech Park",14.26,Completed,UPI
+QR10603,U352,2023-10-20,07:24:08,7,Friday,"Hospital District",Downtown/CBD,13.36,Completed,Wallet
+QR10604,U335,2023-11-14,20:19:23,20,Tuesday,"Shopping Mall","Central Station",27.03,Completed,"Credit Card"
+QR10605,U551,2023-11-12,20:33:13,20,Sunday,Airport,"Suburban Residential",16.95,Completed,UPI
+QR10606,U238,2023-11-04,17:24:49,17,Saturday,"Hospital District","Central Station",17.69,Completed,"Credit Card"
+QR10607,U374,2023-12-27,10:54:08,10,Wednesday,"Central Station","Suburban Residential",23.59,Completed,UPI
+QR10608,U196,2023-12-21,22:38:35,22,Thursday,"Shopping Mall","University Campus",16.43,Completed,"Credit Card"
+QR10609,U864,2023-11-21,18:27:31,18,Tuesday,"Tech Park","Shopping Mall",32.03,Completed,Cash
+QR10610,U226,2023-10-11,21:24:25,21,Wednesday,"Hospital District","Central Station",36.31,Completed,UPI
+QR10611,U314,2023-12-08,06:30:18,6,Friday,"University Campus","Shopping Mall",13.45,Completed,Wallet
+QR10612,U185,2023-11-28,00:54:22,0,Tuesday,Airport,"Shopping Mall",0,Cancelled,Wallet
+QR10613,U593,2023-12-25,06:04:23,6,Monday,"University Campus",Airport,14.72,Completed,UPI
+QR10614,U506,2023-12-21,02:15:48,2,Thursday,Airport,"Hospital District",8.93,Completed,UPI
+QR10615,U189,2023-12-29,19:18:57,19,Friday,Downtown/CBD,"Shopping Mall",12.37,Completed,"Debit Card"
+QR10616,U544,2023-10-13,18:42:17,18,Friday,Downtown/CBD,Airport,0,Cancelled,"Credit Card"
+QR10617,U663,2023-10-24,13:32:05,13,Tuesday,Airport,"Hospital District",21.71,Completed,"Debit Card"
+QR10618,U647,2023-12-18,19:26:24,19,Monday,"Tech Park","Central Station",18.67,Completed,Cash
+QR10619,U821,2023-11-07,13:12:49,13,Tuesday,Downtown/CBD,"Shopping Mall",13.69,Completed,Cash
+QR10620,U662,2023-10-06,12:46:56,12,Friday,Airport,"University Campus",11.68,Completed,"Debit Card"
+QR10621,U612,2023-11-08,21:31:31,21,Wednesday,"University Campus","Suburban Residential",0,Cancelled,UPI
+QR10622,U165,2023-12-10,07:29:36,7,Sunday,"Central Station","Tech Park",14.14,Completed,UPI
+QR10623,U822,2023-11-14,23:59:45,23,Tuesday,"Central Station","Suburban Residential",11.71,Completed,"Debit Card"
+QR10624,U644,2023-11-06,14:07:44,14,Monday,"Tech Park","Suburban Residential",0,Cancelled,UPI
+QR10625,U626,2023-10-14,09:20:00,9,Saturday,"Tech Park","Hospital District",0,Cancelled,Cash
+QR10626,U981,2023-11-02,14:41:38,14,Thursday,Downtown/CBD,Airport,10.82,Completed,UPI
+QR10627,U121,2023-10-19,08:26:16,8,Thursday,"Central Station","Shopping Mall",11.71,Completed,UPI
+QR10628,U740,2023-10-22,13:04:09,13,Sunday,"Shopping Mall","Hospital District",17.41,Completed,UPI
+QR10629,U400,2023-11-19,02:56:25,2,Sunday,"Central Station","University Campus",0,Cancelled,UPI
+QR10630,U107,2023-11-25,06:17:22,6,Saturday,"Shopping Mall","University Campus",17.47,Completed,"Debit Card"
+QR10631,U552,2023-10-23,19:16:10,19,Monday,"Hospital District","Tech Park",16.74,Completed,UPI
+QR10632,U495,2023-10-02,21:50:33,21,Monday,"Central Station",Downtown/CBD,35.15,Completed,"Debit Card"
+QR10633,U974,2023-12-05,09:06:37,9,Tuesday,Downtown/CBD,"Central Station",24.5,Completed,"Credit Card"
+QR10634,U470,2023-10-29,13:02:05,13,Sunday,"Tech Park",Downtown/CBD,14.75,Completed,"Credit Card"
+QR10635,U340,2023-12-07,20:35:34,20,Thursday,"Shopping Mall",Airport,0,Cancelled,"Debit Card"
+QR10636,U873,2023-12-25,17:12:45,17,Monday,Airport,"Shopping Mall",0,Cancelled,"Debit Card"
+QR10637,U800,2023-12-19,00:48:28,0,Tuesday,"University Campus","Suburban Residential",0,Cancelled,UPI
+QR10638,U790,2023-10-07,20:40:51,20,Saturday,"Tech Park","Suburban Residential",17.48,Completed,UPI
+QR10639,U988,2023-12-06,17:29:22,17,Wednesday,"Central Station",Airport,15.06,Completed,"Credit Card"
+QR10640,U296,2023-10-16,17:54:14,17,Monday,Downtown/CBD,"Tech Park",0,Cancelled,UPI
+QR10641,U687,2023-10-17,09:30:04,9,Tuesday,"Hospital District",Downtown/CBD,0,Cancelled,"Debit Card"
+QR10642,U247,2023-10-02,12:57:34,12,Monday,"Tech Park","Hospital District",8.51,Completed,Cash
+QR10643,U706,2023-11-01,15:17:16,15,Wednesday,"University Campus","Suburban Residential",15.13,Completed,"Credit Card"
+QR10644,U896,2023-11-15,15:15:16,15,Wednesday,"University Campus","Tech Park",0,Cancelled,Wallet
+QR10645,U690,2023-12-14,02:44:48,2,Thursday,Airport,"Hospital District",0,Cancelled,"Debit Card"
+QR10646,U278,2023-12-15,23:34:31,23,Friday,"Shopping Mall","University Campus",10.6,Completed,UPI
+QR10647,U760,2023-11-24,22:03:29,22,Friday,"Tech Park","Hospital District",0,Cancelled,"Credit Card"
+QR10648,U314,2023-12-13,21:30:42,21,Wednesday,"Tech Park","Shopping Mall",30.21,Completed,"Credit Card"
+QR10649,U166,2023-12-09,21:27:29,21,Saturday,"Hospital District","Central Station",16.5,Completed,"Credit Card"
+QR10650,U156,2023-11-18,09:35:45,9,Saturday,"Suburban Residential","Hospital District",14.86,Completed,"Debit Card"
