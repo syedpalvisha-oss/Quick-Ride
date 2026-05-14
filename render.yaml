@@ -2,13 +2,9 @@ services:
   - type: web
     name: quickride-web
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./Dockerfile.render
     preDeployCommand: php artisan migrate --force && php artisan storage:link
-    disk:
-      name: quickride-storage
-      mountPath: /var/data
-      sizeGB: 5
     envVars:
       - key: APP_NAME
         value: QuickRide
@@ -21,13 +17,11 @@ services:
       - key: LOG_CHANNEL
         value: stderr
       - key: CACHE_STORE
-        value: redis
+        value: file
       - key: SESSION_DRIVER
-        value: redis
+        value: file
       - key: QUEUE_CONNECTION
-        value: redis
-      - key: REDIS_CLIENT
-        value: phpredis
+        value: database
       - key: FILESYSTEM_DISK
         value: public
       - key: DB_CONNECTION
@@ -36,21 +30,8 @@ services:
         fromDatabase:
           name: quickride-db
           property: connectionString
-      - key: REDIS_URL
-        fromService:
-          name: quickride-redis
-          type: keyvalue
-          property: connectionString
-      - key: FILESYSTEM_LOCAL_ROOT
-        value: /var/data/storage/app/private
-      - key: FILESYSTEM_PUBLIC_ROOT
-        value: /var/data/storage/app/public
-
-  - type: keyvalue
-    name: quickride-redis
-    ipAllowList: []
-    maxmemoryPolicy: allkeys-lru
 
 databases:
   - name: quickride-db
+    plan: free
     databaseName: quickride
