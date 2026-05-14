@@ -1,0 +1,50 @@
+FROM php:8.3-cli
+
+# System dependencies for Laravel + PostgreSQL + build tooling
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    unzip \
+    libpq-dev \
+    libzip-dev \
+    libicu-dev \
+    libonig-dev \
+    curl \
+    ca-certificates \
+    nodejs \
+    npm \
+    && rm -rf /var/lib/apt/lists/*
+
+# PHP extensions required by Laravel and this app
+RUN docker-php-ext-install \
+    bcmath \
+    intl \
+    pdo \
+    pdo_pgsql \
+    zip
+
+# Redis extension for Laravel redis/session/queue drivers
+RUN pecl install redis \
+    && docker-php-ext-enable redis
+
+# Copy Composer binary
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+WORKDIR /app
+
+# Install dependencies first for better layer caching
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Copy application source and build frontend assets
+COPY . .
+RUN npm run build
+
+# Ensure writable Laravel directories
+RUN chown -R www-data:www-data storage bootstrap/cache
+
+EXPOSE 10000
+
+CMD ["sh", "-c", "php artisan serve --host 0.0.0.0 --port ${PORT:-10000}"]
