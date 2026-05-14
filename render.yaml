@@ -1,0 +1,85 @@
+envVarGroups:
+  - name: quickride-production
+    envVars:
+      - key: APP_NAME
+        value: QuickRide
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: 'false'
+      - key: APP_KEY
+        generateValue: true
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: CACHE_STORE
+        value: redis
+      - key: SESSION_DRIVER
+        value: redis
+      - key: QUEUE_CONNECTION
+        value: redis
+      - key: REDIS_CLIENT
+        value: phpredis
+      - key: FILESYSTEM_DISK
+        value: public
+
+services:
+  - type: web
+    name: quickride-web
+    runtime: php
+    plan: starter
+    buildCommand: |
+      composer install --no-dev --optimize-autoloader
+      npm ci
+      npm run build
+    preDeployCommand: php artisan migrate --force && php artisan storage:link
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    disk:
+      name: quickride-storage
+      mountPath: /var/data
+      sizeGB: 5
+    envVars:
+      - fromGroup: quickride-production
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_URL
+        fromDatabase:
+          name: quickride-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: quickride-redis
+          type: keyvalue
+          property: connectionString
+      - key: FILESYSTEM_LOCAL_ROOT
+        value: /var/data/storage/app/private
+      - key: FILESYSTEM_PUBLIC_ROOT
+        value: /var/data/storage/app/public
+
+  - type: worker
+    name: quickride-horizon
+    runtime: php
+    plan: starter
+    buildCommand: composer install --no-dev --optimize-autoloader
+    startCommand: php artisan horizon
+    envVars:
+      - fromGroup: quickride-production
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_URL
+        fromDatabase:
+          name: quickride-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          name: quickride-redis
+          type: keyvalue
+          property: connectionString
+
+  - type: keyvalue
+    name: quickride-redis
+    ipAllowList: []
+    maxmemoryPolicy: allkeys-lru
+
+databases:
+  - name: quickride-db
+    databaseName: quickride

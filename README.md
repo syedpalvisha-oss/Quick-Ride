@@ -31,6 +31,12 @@ Quick-Ride is a ride scheduling and logistics platform that enables efficient co
 4. Run `php artisan migrate`
 5. Start server: `php artisan serve`
 
+## Deploy on Render
+1. Connect the repository to Render and use the root-level `render.yaml` blueprint.
+2. Render will create the web service, Postgres database, Redis cache, and Horizon worker.
+3. The app reads `RENDER_EXTERNAL_URL` automatically, so public URLs work without manual `APP_URL` wiring.
+4. Uploaded files are stored on the Render disk mounted at `/var/data`.
+
 ## Future Enhancements
 - Real-time GPS tracking
 - Map integration
