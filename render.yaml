@@ -4,7 +4,6 @@ services:
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile.render
-    preDeployCommand: php artisan migrate --force && php artisan storage:link
     envVars:
       - key: APP_NAME
         value: QuickRide
