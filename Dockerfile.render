@@ -1,4 +1,4 @@
-FROM php:8.3-cli
+FROM php:8.4-cli
 
 # System dependencies for Laravel + PostgreSQL + build tooling
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -17,7 +17,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # PHP extensions required by Laravel and this app
 RUN docker-php-ext-install \
     bcmath \
+    exif \
     intl \
+    pcntl \
     pdo \
     pdo_pgsql \
     zip
