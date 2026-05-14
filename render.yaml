@@ -55,7 +55,7 @@ services:
       - key: FILESYSTEM_PUBLIC_ROOT
         value: /var/data/storage/app/public
 
-  - type: worker
+  - type: background_worker
     name: quickride-horizon
     runtime: php
     plan: starter
